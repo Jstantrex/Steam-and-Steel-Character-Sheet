@@ -1,5 +1,5 @@
 .repeating-details.actions.background-color
-    h1(data-i18n="actions") actions
+    h1 actions
     fieldset(class="repeating_actions")
         input.toggles(name="attr_toggles" type="hidden" value="display,settings,")
         input(name="attr_action_type" type="hidden" value="")
@@ -11,25 +11,25 @@
             span.collapse(name="attr_description")
         .settings
             label.sublabel(data-i18n-title="action_name" title="action name")
-                span.sublabel.darkred(data-i18n="name") name
+                span.sublabel.darkred name
                 input(data-i18n-placeholder="name" name="attr_name" placeholder="name" title="@{name}" type="text" value="")
             label(data-i18n-title="actions" title="actions")
-                span.sublabel.darkred(data-i18n="actions") actions
+                span.sublabel.darkred actions
                 select.simple(name="attr_action" title="@{action}")
                     each val in ["1-action", "2-action", "3-action", "1-to-3-actions", "reaction", "free_action","other"]
                         option(data-i18n=val value=val)=val
             label.sublabel(data-i18n-title="other" title="other")
-                span.sublabel.darkred(data-i18n="other") other
+                span.sublabel.darkred other
                 input(data-i18n-placeholder="other" name="attr_other" placeholder="other" spellcheck="false" title="@{other}" type="text" value="")
             label.sublabel(data-i18n-title="action_trigger" title="action trigger")
-                span.sublabel.darkred(data-i18n="trigger") trigger
+                span.sublabel.darkred trigger
                 input(data-i18n-placeholder="trigger" name="attr_trigger" placeholder="trigger" spellcheck="false" title="@{trigger}" type="text" value="")
             label.sublabel(data-i18n-title="action_traits" title="action traits")
-                span.sublabel.darkred(data-i18n="traits") traits
+                span.sublabel.darkred traits
                 input(data-i18n-placeholder="traits" name="attr_traits" placeholder="traits" spellcheck="false" title="@{traits}" type="text" value="")
             label.sublabel(data-i18n-title="action_source" title="action source")
-                span.sublabel.darkred(data-i18n="source") source
+                span.sublabel.darkred source
                 input(data-i18n-placeholder="source" name="attr_source" placeholder="source" spellcheck="false" title="@{source}" type="text" value="")
             label.sublabel(data-i18n-title="action_description" title="action description")
-                span.sublabel.darkred(data-i18n="description") description
+                span.sublabel.darkred description
                 textarea(data-i18n-placeholder="description" name="attr_description" placeholder="description" spellcheck="false" title="@{description}")

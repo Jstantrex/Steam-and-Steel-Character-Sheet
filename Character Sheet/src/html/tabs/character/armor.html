@@ -1,142 +1,142 @@
 <!--- ARMOR CLASS column --->
-<h1 data-i18n='armor_class'>armor class</h1>
+<h1 >armor class</h1>
 <!---AC Base row -->
 <div class='grid armorclass-main'>
-    <button class='pictos settings-button' data-i18n-title='armor_class_settings' name='act_toggle_armor_class' title='armor class settings' type='action'>
+    <button class='pictos settings-button' name='act_toggle_armor_class' title='armor class settings' type='action'>
         y
     </button>
     <div class='circle'>
-        <label data-i18n-title='ac' title='ds'>
-            <span data-i18n='ac'>ds</span>
+        <label title='ds'>
+            <span >ds</span>
             <span class='ac-circle' name='attr_armor_class' title='@{ac}'></span>
         </label>
     </div>
     <div class='dcbase sublabel'>
         <span class='symbol'>=</span>
-        <span class='sublabel' data-i18n='dc_base'>dc base</span>
-        <span class='sublabel' data-i18n='10'><b>10</b></span>
+        <span class='sublabel' >dc base</span>
+        <span class='sublabel' ><b>10</b></span>
     </div>
     <div class='armor-cap'>
-        <label class='sublabel' data-i18n-title='armor_class_modifier' title='armor class modifier'>
-            <span class='sublabel darkred' data-i18n='mod'>mod</span>
+        <label class='sublabel' title='armor class modifier'>
+            <span class='sublabel darkred' >mod</span>
             <span name='attr_armor_class_ability' title='@{armor_class_ability}'></span>
         </label>
-        <span data-i18n='or'>or</span>
+        <span >or</span>
         <div>
-            <label class='sublabel' data-i18n-title='cap' title='cap'>
-                <span class='sublabel darkred' data-i18n='cap'>cap</span>
+            <label class='sublabel' title='cap'>
+                <span class='sublabel darkred' >cap</span>
                 <span name='attr_armor_class_cap' title='@{armor_class_cap}'></span>
             </label>
         </div>
     </div>
-    <label class='sublabel' data-i18n-title='armor_class_item' title='armor class item'>
-        <span class='sublabel darkred' data-i18n='item'>shield</span>
+    <label class='sublabel' title='armor class item'>
+        <span class='sublabel darkred' >shield</span>
         <span name='attr_armor_class_item' title='@{armor_class_item}'></span>
     </label>
-	<label class='sublabel' data-i18n-title='armor_class_misc' title='armor class misc'>
-        <span class='sublabel darkred' data-i18n='misc'>misc</span>
+	<label class='sublabel' title='armor class misc'>
+        <span class='sublabel darkred' >misc</span>
         <span name='attr_armor_class_misc' title='@{armor_class_misc}'></span>
     </label>
-    <label class='sublabel' data-i18n-title='armor_class_temporary' title='armor class temporary'>
-        <span class='sublabel darkred' data-i18n='temp'>temp</span>
+    <label class='sublabel' title='armor class temporary'>
+        <span class='sublabel darkred' >temp</span>
         <span name='attr_armor_class_temporary' title='@{armor_class_temporary}'></span>
     </label>
     <div class='settings grid'>
         <!-- The Dex & Cap section in Armor Class -->
         <div class='armor-cap'>
             <div class='ability-select'>
-                <label data-i18n-title='armor_class_ability_select' title='armor class ability select'>
+                <label title='armor class ability select'>
                     <select name='attr_armor_class_ability_select' title='@{armor_class_ability_select}'>
-                        <option data-i18n='str' value='@{strength_modifier}'>str</option>
-                        <option data-i18n='dex' value='@{dexterity_modifier}' selected>dex</option>
-                        <option data-i18n='con' value='@{constitution_modifier}'>con</option>
-                        <option data-i18n='int' value='@{intelligence_modifier}'>int</option>
-                        <option data-i18n='wis' value='@{wisdom_modifier}'>wis</option>
-                        <option data-i18n='cha' value='@{charisma_modifier}'>cha</option>
-                        <option data-i18n='custom' value='custom'>custom</option>
+                        <option value='@{strength_modifier}'>str</option>
+                        <option value='@{dexterity_modifier}' selected>dex</option>
+                        <option value='@{constitution_modifier}'>con</option>
+                        <option value='@{intelligence_modifier}'>int</option>
+                        <option value='@{wisdom_modifier}'>wis</option>
+                        <option value='@{charisma_modifier}'>cha</option>
+                        <option value='custom'>custom</option>
                     </select>
                 </label>
-                <label data-i18n-title='armor_class_ability_input' title='armor class ability input'>
-                   <input data-i18n-placeholder='0' name='attr_armor_class_ability' placeholder='0' spellcheck='false' title='@{armor_class_ability}' type='text' value='' />
+                <label title='armor class ability input'>
+                   <input name='attr_armor_class_ability' placeholder='0' spellcheck='false' title='@{armor_class_ability}' type='text' value='' />
                 </label>
             </div>
-            <span data-i18n='or'>or</span>
-            <label data-i18n-title='armor_class_cap' title='armor class cap'>
-                <span class='sublabel darkred' data-i18n='cap'>cap</span>
-                <input data-i18n-placeholder='3' name='attr_armor_class_cap' placeholder='3' spellcheck='false' title='@{armor_class_cap}' type='text' value='' />
+            <span >or</span>
+            <label title='armor class cap'>
+                <span class='sublabel darkred' >cap</span>
+                <input name='attr_armor_class_cap' placeholder='3' spellcheck='false' title='@{armor_class_cap}' type='text' value='' />
             </label>
         </div>
-        <label class='sublabel' data-i18n-title='armor_class_item' title='armor class item'>
-            <span class='sublabel darkred' data-i18n='item'>shield</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_item' placeholder='0' spellcheck='false' title='@{armor_class_item}' type='text' value='0' />
+        <label class='sublabel' title='armor class item'>
+            <span class='sublabel darkred' >shield</span>
+            <input name='attr_armor_class_item' placeholder='0' spellcheck='false' title='@{armor_class_item}' type='text' value='0' />
         </label>
-		<label class='sublabel' data-i18n-title='armor_class_misc' title='armor class misc'>
-            <span class='sublabel darkred' data-i18n='item'>misc</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_misc' placeholder='0' spellcheck='false' title='@{armor_class_misc}' type='text' value='0' />
+		<label class='sublabel' title='armor class misc'>
+            <span class='sublabel darkred' >misc</span>
+            <input name='attr_armor_class_misc' placeholder='0' spellcheck='false' title='@{armor_class_misc}' type='text' value='0' />
         </label>
-        <label class='sublabel' data-i18n-title='armor_class_temporary' title='armor class temporary'>
-            <span class='sublabel darkred' data-i18n='temp'>temp</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_temporary' placeholder='0' spellcheck='false' title='@{armor_class_temporary}' type='text' value='0' />
+        <label class='sublabel' title='armor class temporary'>
+            <span class='sublabel darkred' >temp</span>
+            <input name='attr_armor_class_temporary' placeholder='0' spellcheck='false' title='@{armor_class_temporary}' type='text' value='0' />
         </label>
-        <label data-i18n-title='armor_class_notes' title='armor class notes'>
-            <span data-i18n='notes'>notes</span>
-            <textarea data-i18n-placeholder='notes' name='attr_armor_class_notes' placeholder='notes' spellcheck='false' title='@{armor_class_notes}' value=''></textarea>
+        <label title='armor class notes'>
+            <span >notes</span>
+            <textarea name='attr_armor_class_notes' placeholder='notes' spellcheck='false' title='@{armor_class_notes}' value=''></textarea>
         </label>
     </div>
 </div>
 <hr />
 <!-- Shield row -->
 <div class='grid shield-grid'>
-    <button class='pictos settings-button' data-i18n-title='shield_settings' name='act_toggle_shield' title='shield settings' type='action'>
+    <button class='pictos settings-button' name='act_toggle_shield' title='shield settings' type='action'>
         y
     </button>
     <div class='circle'>
         <label class='shield display'>
-            <span data-i18n='shield'>absorption</span>
+            <span >absorption</span>
             <span name='attr_armor_class_shield' title='@{armor_class_shield}'></span>
         </label>
     </div>
-    <label class='sublabel' data-i18n-title='shield_temporary' title='shield temporary'>
-        <span class='sublabel darkred' data-i18n='temp'>temp</span>
+    <label class='sublabel' title='shield temporary'>
+        <span class='sublabel darkred' >temp</span>
         <span name='attr_armor_class_shield_temporary' title='@{armor_class_shield_temporary}'></span>
     </label>
-    <label class='sublabel' data-i18n-title='shield_hardness' title='shield hardness'>
-        <span class='sublabel darkred' data-i18n='hardness'>dr</span>
+    <label class='sublabel' title='shield hardness'>
+        <span class='sublabel darkred' >dr</span>
         <span name='attr_armor_class_shield_hardness' title='@{armor_class_shield_hardness}'></span>
     </label>
     <div class='shield-hp'>
-        <label class='sublabel' data-i18n-title='shield_hp' title='shield hp'>
-            <span class='sublabel darkred' data-i18n='hp'>abp</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_shield_hp' placeholder='0' spellcheck='false' title='@{armor_class_shield_hp}' type='text' value='6' />
+        <label class='sublabel' title='shield hp'>
+            <span class='sublabel darkred' >abp</span>
+            <input name='attr_armor_class_shield_hp' placeholder='0' spellcheck='false' title='@{armor_class_shield_hp}' type='text' value='6' />
         </label>
         <span>/</span>
-        <label class='sublabel' data-i18n-title='shield_hp_max' title='shield hp max'>
-            <span class='sublabel darkred' data-i18n='max'>max</span>
+        <label class='sublabel' title='shield hp max'>
+            <span class='sublabel darkred' >max</span>
             <span name='attr_armor_class_shield_max' title='@{armor_class_shield_max}'></span>
         </label>
     </div>
     <div class='settings grid'>
-        <label data-i18n-title='shield_bonus_to_ac' title='shield bonus to ac'>
-            <span class='sublabel darkred' data-i18n='bonus'>absorption</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_shield_ac_bonus' placeholder='0' spellcheck='false' title='@{armor_class_shield_ac_bonus}' type='text' value='0' />
+        <label title='shield bonus to ac'>
+            <span class='sublabel darkred' >absorption</span>
+            <input name='attr_armor_class_shield_ac_bonus' placeholder='0' spellcheck='false' title='@{armor_class_shield_ac_bonus}' type='text' value='0' />
         </label>
-        <label data-i18n-title='shield_temporary' title='shield temporary'>
-            <span class='sublabel darkred' data-i18n='temp'>temp</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_shield_temporary' placeholder='0' spellcheck='false' title='@{armor_class_shield_temporary}' type='text' value='0' />
+        <label title='shield temporary'>
+            <span class='sublabel darkred' >temp</span>
+            <input name='attr_armor_class_shield_temporary' placeholder='0' spellcheck='false' title='@{armor_class_shield_temporary}' type='text' value='0' />
         </label>
-        <label data-i18n-title='shield_hardness' title='shield hardness'>
-            <span class='sublabel darkred' data-i18n='hardness'>dr</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_shield_hardness' placeholder='0' spellcheck='false' title='@{armor_class_shield_hardness}' type='text' value='3' />
+        <label title='shield hardness'>
+            <span class='sublabel darkred' >dr</span>
+            <input name='attr_armor_class_shield_hardness' placeholder='0' spellcheck='false' title='@{armor_class_shield_hardness}' type='text' value='3' />
         </label>
         <div class='shield-hp'>
-            <label data-i18n-title='shield_hp_max' title='shield hp max'>
-                <span class='sublabel darkred' data-i18n='hp_max'>max</span>
-                <input data-i18n-placeholder='0' name='attr_armor_class_shield_max' placeholder='0' spellcheck='false' title='@{armor_class_shield_max}' type='text' value='6' />
+            <label title='shield hp max'>
+                <span class='sublabel darkred' >max</span>
+                <input name='attr_armor_class_shield_max' placeholder='0' spellcheck='false' title='@{armor_class_shield_max}' type='text' value='6' />
             </label>
         </div>
-        <label data-i18n-title='shield_notes' title='shield notes'>
-            <span data-i18n='notes'>notes</span>
-            <textarea data-i18n-placeholder='notes' name='attr_armor_class_shield_notes' placeholder='notes' spellcheck='false' title='@{armor_class_shield_notes}' value=''></textarea>
+        <label title='shield notes'>
+            <span >notes</span>
+            <textarea name='attr_armor_class_shield_notes' placeholder='notes' spellcheck='false' title='@{armor_class_shield_notes}' value=''></textarea>
         </label>
     </div>
 </div>
