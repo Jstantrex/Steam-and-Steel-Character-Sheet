@@ -40,15 +40,15 @@ mixin repeating_spell_section(section_name)
     input(accept="data" name="attr_" + section_name + "_spelldrop_data" type="hidden")
 
     .spell-panel-header
-        span.sublabel.darkred() NAME
+        span.sublabel.darkred NAME
         case repeating_section_name
             when "repeating_spellfocus"
-                span.sublabel.darkred.spellfocus-actions() ACTIONS
-                span.sublabel.darkred.spellfocus-level() LEVEL
+                span.sublabel.darkred.spellfocus-actions ACTIONS
+                span.sublabel.darkred.spellfocus-level LEVEL
             default
-                span.sublabel.darkred() ACTIONS
-                span.sublabel.darkred() LEVEL
-                span.sublabel.darkred() Daily Uses
+                span.sublabel.darkred ACTIONS
+                span.sublabel.darkred LEVEL
+                span.sublabel.darkred Daily Uses
         span.details-toggle-column
     input.toggles(name="attr_toggles" type="hidden" value="")
     fieldset(class=repeating_section_name)
