@@ -6,8 +6,8 @@
         y
     </button>
     <div class='circle'>
-        <label data-i18n-title='ac' title='ac'>
-            <span data-i18n='ac'>ac</span>
+        <label data-i18n-title='ac' title='ds'>
+            <span data-i18n='ac'>ds</span>
             <span class='ac-circle' name='attr_armor_class' title='@{ac}'></span>
         </label>
     </div>
@@ -29,16 +29,13 @@
             </label>
         </div>
     </div>
-    <label class='sublabel' data-i18n-title='armor_class_proficiency' title='armor class proficiency'>
-        <span class='sublabel darkred' data-i18n='prof'>prof</span>
-        <span>
-            <span class="inline" name='attr_armor_class_proficiency_display'></span>
-            <span class="inline" name='attr_armor_class_proficiency' title='@{armor_class_proficiency}'></span>
-        </span>
-    </label>
     <label class='sublabel' data-i18n-title='armor_class_item' title='armor class item'>
-        <span class='sublabel darkred' data-i18n='item'>item</span>
+        <span class='sublabel darkred' data-i18n='item'>shield</span>
         <span name='attr_armor_class_item' title='@{armor_class_item}'></span>
+    </label>
+	<label class='sublabel' data-i18n-title='armor_class_misc' title='armor class misc'>
+        <span class='sublabel darkred' data-i18n='misc'>misc</span>
+        <span name='attr_armor_class_misc' title='@{armor_class_misc}'></span>
     </label>
     <label class='sublabel' data-i18n-title='armor_class_temporary' title='armor class temporary'>
         <span class='sublabel darkred' data-i18n='temp'>temp</span>
@@ -69,75 +66,18 @@
                 <input data-i18n-placeholder='3' name='attr_armor_class_cap' placeholder='3' spellcheck='false' title='@{armor_class_cap}' type='text' value='' />
             </label>
         </div>
-        <label class='sublabel' data-i18n-title='armor_class_rank_select' title='armor class rank select'>
-            <span class='sublabel darkred' data-i18n='rank'>rank</span>
-            <select name='attr_armor_class_dc_rank' title='@{armor_class_dc_rank}'>
-                <option data-i18n='untrained' value='0' selected>untrained</option>
-                <option data-i18n='trained' value='2'>trained</option>
-                <option data-i18n='expert' value='4'>expert</option>
-                <option data-i18n='master' value='6'>master</option>
-                <option data-i18n='legendary' value='8'>legendary</option>
-            </select>
-        </label>
         <label class='sublabel' data-i18n-title='armor_class_item' title='armor class item'>
-            <span class='sublabel darkred' data-i18n='item'>item</span>
+            <span class='sublabel darkred' data-i18n='item'>shield</span>
             <input data-i18n-placeholder='0' name='attr_armor_class_item' placeholder='0' spellcheck='false' title='@{armor_class_item}' type='text' value='0' />
+        </label>
+		<label class='sublabel' data-i18n-title='armor_class_misc' title='armor class misc'>
+            <span class='sublabel darkred' data-i18n='item'>misc</span>
+            <input data-i18n-placeholder='0' name='attr_armor_class_misc' placeholder='0' spellcheck='false' title='@{armor_class_misc}' type='text' value='0' />
         </label>
         <label class='sublabel' data-i18n-title='armor_class_temporary' title='armor class temporary'>
             <span class='sublabel darkred' data-i18n='temp'>temp</span>
             <input data-i18n-placeholder='0' name='attr_armor_class_temporary' placeholder='0' spellcheck='false' title='@{armor_class_temporary}' type='text' value='0' />
         </label>
-        <!-- Unarmored row -->
-        <div class='grid unarmored-grid'>
-            <div>
-                <h2 data-i18n='unarmored'>unarmored</h2>
-                <label data-i18n-title='unarmed_rank_select' title='unarmored rank select'>
-                    <select name='attr_armor_class_unarmored_rank' title='@{armor_class_unarmored_rank}'>
-                        <option data-i18n='untrained' value='0' selected>untrained</option>
-                        <option data-i18n='trained' value='2'>trained</option>
-                        <option data-i18n='expert' value='4'>expert</option>
-                        <option data-i18n='master' value='6'>master</option>
-                        <option data-i18n='legendary' value='8'>legendary</option>
-                    </select>
-                </label>
-            </div>
-            <div>
-                <h2 data-i18n='light'>light</h2>
-                <label data-i18n-title='light_armor_rank_select' title='light armor rank select'>
-                    <select name='attr_armor_class_light_rank' title='@{armor_class_light_rank}'>
-                        <option data-i18n='untrained' value='0' selected>untrained</option>
-                        <option data-i18n='trained' value='2'>trained</option>
-                        <option data-i18n='expert' value='4'>expert</option>
-                        <option data-i18n='master' value='6'>master</option>
-                        <option data-i18n='legendary' value='8'>legendary</option>
-                    </select>
-                </label>
-            </div>
-            <div>
-                <h2 data-i18n='medium'>medium</h2>
-                <label data-i18n-title='medium_armor_rank_select' title='medium armor rank select'>
-                    <select name='attr_armor_class_medium_rank' title='@{armor_class_medium_rank}'>
-                        <option data-i18n='untrained' value='0' selected>untrained</option>
-                        <option data-i18n='trained' value='2'>trained</option>
-                        <option data-i18n='expert' value='4'>expert</option>
-                        <option data-i18n='master' value='6'>master</option>
-                        <option data-i18n='legendary' value='8'>legendary</option>
-                    </select>
-                </label>
-            </div>
-            <div>
-                <h2 data-i18n='heavy'>heavy</h2>
-                <label data-i18n-title='heavy_armor_rank_select' title='heavy armor rank select'>
-                    <select name='attr_armor_class_heavy_rank' title='@{armor_class_heavy_rank}'>
-                        <option data-i18n='untrained' value='0' selected>untrained</option>
-                        <option data-i18n='trained' value='2'>trained</option>
-                        <option data-i18n='expert' value='4'>expert</option>
-                        <option data-i18n='master' value='6'>master</option>
-                        <option data-i18n='legendary' value='8'>legendary</option>
-                    </select>
-                </label>
-            </div>
-        </div>
         <label data-i18n-title='armor_class_notes' title='armor class notes'>
             <span data-i18n='notes'>notes</span>
             <textarea data-i18n-placeholder='notes' name='attr_armor_class_notes' placeholder='notes' spellcheck='false' title='@{armor_class_notes}' value=''></textarea>
@@ -152,29 +92,21 @@
     </button>
     <div class='circle'>
         <label class='shield display'>
-            <span data-i18n='shield'>shield</span>
+            <span data-i18n='shield'>absorption</span>
             <span name='attr_armor_class_shield' title='@{armor_class_shield}'></span>
         </label>
     </div>
-    <label class='sublabel' data-i18n-title='shield_bonus_to_ac' title='shield bonus to ac'>
-        <span class='sublabel darkred' data-i18n='bonus'>bonus</span>
-        <span name='attr_armor_class_shield_ac_bonus' title='@{armor_class_shield_ac_bonus}'></span>
-    </label>
     <label class='sublabel' data-i18n-title='shield_temporary' title='shield temporary'>
         <span class='sublabel darkred' data-i18n='temp'>temp</span>
         <span name='attr_armor_class_shield_temporary' title='@{armor_class_shield_temporary}'></span>
     </label>
     <label class='sublabel' data-i18n-title='shield_hardness' title='shield hardness'>
-        <span class='sublabel darkred' data-i18n='hardness'>hardness</span>
+        <span class='sublabel darkred' data-i18n='hardness'>dr</span>
         <span name='attr_armor_class_shield_hardness' title='@{armor_class_shield_hardness}'></span>
-    </label>
-    <label class='sublabel' data-i18n-title='shield_bt' title='shield bt'>
-        <span class='sublabel darkred' data-i18n='bt'>bt</span>
-        <span name='attr_armor_class_shield_bt' title='@{armor_class_shield_bt}'></span>
     </label>
     <div class='shield-hp'>
         <label class='sublabel' data-i18n-title='shield_hp' title='shield hp'>
-            <span class='sublabel darkred' data-i18n='hp'>hp</span>
+            <span class='sublabel darkred' data-i18n='hp'>abp</span>
             <input data-i18n-placeholder='0' name='attr_armor_class_shield_hp' placeholder='0' spellcheck='false' title='@{armor_class_shield_hp}' type='text' value='6' />
         </label>
         <span>/</span>
@@ -185,7 +117,7 @@
     </div>
     <div class='settings grid'>
         <label data-i18n-title='shield_bonus_to_ac' title='shield bonus to ac'>
-            <span class='sublabel darkred' data-i18n='bonus'>bonus</span>
+            <span class='sublabel darkred' data-i18n='bonus'>absorption</span>
             <input data-i18n-placeholder='0' name='attr_armor_class_shield_ac_bonus' placeholder='0' spellcheck='false' title='@{armor_class_shield_ac_bonus}' type='text' value='0' />
         </label>
         <label data-i18n-title='shield_temporary' title='shield temporary'>
@@ -193,16 +125,12 @@
             <input data-i18n-placeholder='0' name='attr_armor_class_shield_temporary' placeholder='0' spellcheck='false' title='@{armor_class_shield_temporary}' type='text' value='0' />
         </label>
         <label data-i18n-title='shield_hardness' title='shield hardness'>
-            <span class='sublabel darkred' data-i18n='hardness'>hardness</span>
+            <span class='sublabel darkred' data-i18n='hardness'>dr</span>
             <input data-i18n-placeholder='0' name='attr_armor_class_shield_hardness' placeholder='0' spellcheck='false' title='@{armor_class_shield_hardness}' type='text' value='3' />
-        </label>
-        <label data-i18n-title='shield_bt' title='shield bt'>
-            <span class='sublabel darkred' data-i18n='bt'>bt</span>
-            <input data-i18n-placeholder='0' name='attr_armor_class_shield_bt' placeholder='0' spellcheck='false' title='@{armor_class_shield_bt}' type='text' value='3' />
         </label>
         <div class='shield-hp'>
             <label data-i18n-title='shield_hp_max' title='shield hp max'>
-                <span class='sublabel darkred' data-i18n='hp_max'>hp max</span>
+                <span class='sublabel darkred' data-i18n='hp_max'>max</span>
                 <input data-i18n-placeholder='0' name='attr_armor_class_shield_max' placeholder='0' spellcheck='false' title='@{armor_class_shield_max}' type='text' value='6' />
             </label>
         </div>

@@ -5,7 +5,7 @@
 		span.pictos q
 
 	//-  Buttons to change page view
-	- const pcTabs = ['character', 'details', 'feats', 'inventory', 'spells', 'options'];
+	- const pcTabs = ['character', 'details', 'feats', 'inventory', 'options'];
 	each tab in pcTabs
 		label(data-i18n-title=tab title=tab)
 			input(name=`attr_sheet_type` type='radio' value=tab)
