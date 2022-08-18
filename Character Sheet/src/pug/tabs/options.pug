@@ -3,7 +3,6 @@
         h1 options
         .options-panel
             h2 customize rolls
-
             label(title='bonus to roll')
                 input(name='attr_query_roll_bonus' title='@{query_roll_bonus}' type='checkbox' value='?{@{text_roll_bonus}|0}')
                 span bonus to roll
@@ -12,7 +11,7 @@
                 input(name='attr_query_roll_damage_bonus' title='@{query_roll_damage_bonus}' type='checkbox' value='?{@{text_roll_damage_bonus}|0}')
                 span bonus to damage
 
-            label(data-i18n-title='#_damage_dice' title='# Damage Dice')
+            label(title='# Damage Dice')
                 input(name='attr_query_roll_damage_dice' title='@{query_roll_damage_dice}' type='checkbox' value='?{@{text_#_damage_dice}|@{damage_dice}}')
                 span # Damage Dice
 
@@ -27,9 +26,9 @@
                 input(name='attr_roll_show_notes' title='@{roll_show_notes}' type='checkbox' value='[[1]]')
                 span Show Notes in Rolls
 
-            label(data-i18n-title="Limit height of Notes and Description in roll template" title="Limit height of Notes and Description in roll template")
+            label(title="Limit height of Notes and Description in roll template")
                 input(name="attr_roll_limit_height" title="@{roll_limit_height}" type="checkbox" value="limit-height")
-                span(data-i18n="Limit height of Notes and Description in roll template") Limit height of Notes and Description in roll template
+                span() Limit height of Notes and Description in roll template
 
         .options-panel
             h2 customize sheet layout

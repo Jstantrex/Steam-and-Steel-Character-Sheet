@@ -2,7 +2,7 @@
 .spells
     .column
         .spellattack.background-color
-            h1(data-i18n="spell_attack_roll") spell attack roll
+            h1 spell attack roll
             input.toggles(name="attr_toggles" type="hidden" value="")
             input.npc-spellcaster-field(name="attr_spell_attack" title="@{spell_attack}" type="text" value="")
             .grid.spellattack-grid
@@ -10,35 +10,35 @@
                 .circle
                     span(name="attr_spell_attack")
                 span.equals =
-                label.sublabel(data-i18n-title="spell_attack_key_ability" title="spell attack key ability")
-                    span.sublabel.darkred(data-i18n="key") key
+                label.sublabel(title="spell attack key ability")
+                    span.sublabel.darkred key
                     span(name="attr_spell_attack_key_ability")
-                label.sublabel(data-i18n-title="spell_attack_proficiency" title="spell attack proficiency")
-                    span.sublabel.darkred(data-i18n="prof") prof
+                label.sublabel(title="spell attack proficiency")
+                    span.sublabel.darkred prof
                     span
                         span.inline(name="attr_spell_attack_proficiency_display")
                         span.inline(name="attr_spell_attack_proficiency" title="@{spell_attack_proficiency}")
-                label.sublabel(data-i18n-title="spell_attack_temporary" title="spell attack temporary")
-                    span.sublabel.darkred(data-i18n="temp") temp
+                label.sublabel(title="spell attack temporary")
+                    span.sublabel.darkred temp
                     span(name="attr_spell_attack_temporary" title="@{spell_attack_temporary}")
             .settings.grid.spellattack-grid
                 .ability-select
-                    label(data-i18n-title="spell_attack_key_ability_select" title="spell attack key ability select")
+                    label(title="spell attack key ability select")
                         +ability_select('spell_attack_key','intelligence')
-                    label(data-i18n-title="spell_attack_key_ability" title="spell attack key ability")
-                        input(data-i18n-placeholder="0" name="attr_spell_attack_key_ability" placeholder="0" spellcheck="false" title="@{spell_attack_key_ability}" type="text" value="")
-                label.sublabel(data-i18n-title="spell_attack_rank" title="spell attack rank")
-                    span.sublabel.darkred(data-i18n="rank") rank
+                    label(title="spell attack key ability")
+                        input(name="attr_spell_attack_key_ability" placeholder="0" spellcheck="false" title="@{spell_attack_key_ability}" type="text" value="")
+                label.sublabel(title="spell attack rank")
+                    span.sublabel.darkred rank
                     +rank_select('spell_attack')
-                label.sublabel(data-i18n-title="spell_attack_temporary" title="spell attack temporary")
-                    span.sublabel.darkred(data-i18n="temp") temp
-                    input(data-i18n-placeholder="0" name="attr_spell_attack_temporary" placeholder="0" spellcheck="false" title="@{spell_attack_temporary}" type="text" value="0")
-                label(data-i18n-title="spell_attack_notes" title="spell attack notes")
-                    span(data-i18n="notes") notes
-                    textarea(data-i18n-placeholder="notes" name="attr_spell_attack_notes" placeholder="notes" spellcheck="false" title="@{spell_attack_notes}" value="")
+                label.sublabel(title="spell attack temporary")
+                    span.sublabel.darkred temp
+                    input(name="attr_spell_attack_temporary" placeholder="0" spellcheck="false" title="@{spell_attack_temporary}" type="text" value="0")
+                label(title="spell attack notes")
+                    span notes
+                    textarea(name="attr_spell_attack_notes" placeholder="notes" spellcheck="false" title="@{spell_attack_notes}" value="")
 
         .spelldc.background-color
-            h1(data-i18n="spell_dc") spell dc
+            h1 spell dc
             input.toggles(name="attr_toggles" type="hidden" value="")
             input.npc-spellcaster-field(name="attr_spell_dc" title="@{spell_dc}" type="text" value="")
             .grid.spelldc-grid
@@ -46,135 +46,135 @@
                 .circle
                     span(name="attr_spell_dc")
                 span.equals =
-                label.sublabel(data-i18n-title="spell_base_dc" title="spell base dc")
-                    span.sublabel.spelldc-base(data-i18n="dc_base") DC Base
-                    span(data-i18n="10")
+                label.sublabel(title="spell base dc")
+                    span.sublabel.spelldc-base DC Base
+                    span
                         b 10
-                label.sublabel(data-i18n-title="spell_dc_key_ability" title="spell dc key ability")
-                    span.sublabel.darkred(data-i18n="key") key
+                label.sublabel(title="spell dc key ability")
+                    span.sublabel.darkred key
                     span(name="attr_spell_dc_key_ability")
-                label.sublabel(data-i18n-title="spell_dc_proficiency" title="spell dc proficiency")
-                    span.sublabel.darkred(data-i18n="prof") prof
+                label.sublabel(title="spell dc proficiency")
+                    span.sublabel.darkred prof
                     span
                         span.inline(name="attr_spell_dc_proficiency_display")
                         span.inline(name="attr_spell_dc_proficiency" title="@{spell_dc_proficiency}")
-                label.sublabel(data-i18n-title="spell_dc_temporary" title="spell dc temporary")
-                    span.sublabel.darkred(data-i18n="temp") temp
+                label.sublabel(title="spell dc temporary")
+                    span.sublabel.darkred temp
                     span(name="attr_spell_dc_temporary" title="@{spell_dc_temporary}")
             .settings.grid.spelldc-grid
                 .ability-select
-                    label(data-i18n-title="spell_dc_key_ability_select" title="spell dc key ability select")
+                    label(title="spell dc key ability select")
                         +ability_select('spell_dc_key','intelligence')
-                    label(data-i18n-title="spell_dc_key_ability" title="spell dc key ability")
-                        input(data-i18n-placeholder="0" name="attr_spell_dc_key_ability" placeholder="0" spellcheck="false" title="@{spell_dc_key_ability}" type="text" value="")
-                label.sublabel(data-i18n-title="spell_dc_rank" title="spell dc rank")
-                    span.sublabel.darkred(data-i18n="rank") rank
+                    label(title="spell dc key ability")
+                        input(name="attr_spell_dc_key_ability" placeholder="0" spellcheck="false" title="@{spell_dc_key_ability}" type="text" value="")
+                label.sublabel(title="spell dc rank")
+                    span.sublabel.darkred rank
                     +rank_select('spell_dc')
-                label.sublabel(data-i18n-title="spell_dc_temporary" title="spell dc temporary")
-                    span.sublabel.darkred(data-i18n="temp") temp
-                    input(data-i18n-placeholder="0" name="attr_spell_dc_temporary" placeholder="0" spellcheck="false" title="@{spell_dc_temporary}" type="text" value="0")
-                label(data-i18n-title="spell_dc_notes" title="spell dc notes")
-                    span(data-i18n="notes") notes
-                    textarea(data-i18n-placeholder="notes" name="attr_spell_dc_notes" placeholder="notes" spellcheck="false" title="@{spell_dc_notes}" value="")
+                label.sublabel(title="spell dc temporary")
+                    span.sublabel.darkred temp
+                    input(name="attr_spell_dc_temporary" placeholder="0" spellcheck="false" title="@{spell_dc_temporary}" type="text" value="0")
+                label(title="spell dc notes")
+                    span notes
+                    textarea(name="attr_spell_dc_notes" placeholder="notes" spellcheck="false" title="@{spell_dc_notes}" value="")
 
         input.toggles(name="attr_toggles" type="hidden" value="")
         .magic-tradition.background-color.pc-spellcaster-field
-            h1(data-i18n="magic_traditions") magic traditions
+            h1 magic traditions
             .grid.magic-tradition-grid
                 each tradition in ['arcane', 'primal', 'occult', 'divine']
-                    label.sublabel(data-i18n-title='magical_tradition_' + tradition title='magical tradition ' + tradition)
-                        span.sublabel.darkred.darkred-half-left(data-i18n=tradition)=tradition
+                    label.sublabel( title='magical tradition ' + tradition)
+                        span.sublabel.darkred.darkred-half-left=tradition
                         span.sublabel.darkred.darkred-half-right(name='attr_magic_tradition_' + tradition + '_proficiency' title='@{magic_tradition_' + tradition + '_proficiency}')
                         +rank_select('magic_tradition_' + tradition)(class='simple')
 
                 label.spellcaster(title="prepared spell caster")
                     input(name="attr_spellcaster_prepared" title="@{spellcaster_prepared}" type="checkbox" value="prepared")
-                    span(data-i18n="prepared") prepared
+                    span prepared
                 label.spellcaster(title="spontaneous spell caster")
                     input(name="attr_spellcaster_spontaneous" title="@{spellcaster_spontaneous}" type="checkbox" value="spontaneous")
-                    span(data-i18n="spontaneous") spontaneous
+                    span spontaneous
 
         .magic-tradition.background-color.npc-spellcaster-field
             .grid.magic-tradition-grid
                 label.spellcaster(title="prepared spell caster")
                     input(name="attr_spellcaster_prepared" title="@{spellcaster_prepared}" type="checkbox" value="prepared")
-                    span(data-i18n="prepared") prepared
+                    span prepared
                 label.spellcaster(title="spontaneous spell caster")
                     input(name="attr_spellcaster_spontaneous" title="@{spellcaster_spontaneous}" type="checkbox" value="spontaneous")
-                    span(data-i18n="spontaneous") spontaneous
+                    span spontaneous
 
         .spellslots.background-color
-            h1(data-i18n="spell_slots_per_day") spell slots per day
+            h1 spell slots per day
             label.spellslots-row
-                span.sublabel.darkred.cantrip-level(data-i18n="cantrip_level") cantrip level
+                span.sublabel.darkred.cantrip-level cantrip level
             label.spellslots-row
-                span(data-i18n="cantrips") CANTRIPS
+                span CANTRIPS
                 input(type="number" name="attr_cantrips_per_day" value="")
             label.spellslots-row
-                span.sublabel.darkred.level(data-i18n="level") level
-                span.sublabel.darkred.slots-per-day(data-i18n="spell_slots_per_day") spell slots per day
+                span.sublabel.darkred.level level
+                span.sublabel.darkred.slots-per-day spell slots per day
             - var levelnumber = 1
             while levelnumber <= 10
                 label.spellslots-row
-                    span(data-i18n=levelnumber + "-level")='level ' + levelnumber
+                    span='level ' + levelnumber
                     input(type="number" name="attr_level_" + levelnumber + "_per_day" value="")
                     span /
                     input(type="number" name="attr_level_" + levelnumber + "_per_day_max" value="")
                 - levelnumber++
         .spellsectiontoggles.background-color
-            h1(data-i18n="toggle_sections") Toggle Sections
+            h1 Toggle Sections
             label.spellsectiontoggles-row
-                span.sublabel.darkred(data-i18n="off_on") off/on
-                span.sublabel.darkred(data-i18n="spell_section") spell_section
+                span.sublabel.darkred off/on
+                span.sublabel.darkred spell_section
             label.spellsectiontoggles-row
                 span.checkbox
-                    label.switch(data-i18-titlen='innate_spells' title='innate spells')
+                    label.switch(title='innate spells')
                         input(name="attr_toggle_innate" title="@{toggle_innate}" type="checkbox" value="innate" checked)
                         span.slider
-                span(data-i18n="innate_spells") innate spells
+                span innate spells
             label.spellsectiontoggles-row
                 span.checkbox
-                    label.switch(data-i18-titlen='focus_spells' title='focus spells')
+                    label.switch(title='focus spells')
                         input(name="attr_toggle_focus" title="@{toggle_focus}" type="checkbox" value="focus" checked)
                         span.slider
-                span(data-i18n="focus_spells") focus spells
+                span focus spells
             label.spellsectiontoggles-row
                 span.checkbox
-                    label.switch(data-i18-titlen='cantrips' title='cantrips')
+                    label.switch(title='cantrips')
                         input(name="attr_toggle_cantrips" title="@{toggle_cantrips}" type="checkbox" value="cantrips" checked)
                         span.slider
-                span(data-i18n="cantrips") cantrips
+                span cantrips
             label.spellsectiontoggles-row
                 span.checkbox
-                    label.switch(data-i18-titlen='spells' title='spells')
+                    label.switch(title='spells')
                         input(name="attr_toggle_normalspells" title="@{toggle_normalspells}" type="checkbox" value="spells" checked)
                         span.slider
-                span(data-i18n="spells") spells
+                span spells
     .column
         .background-color.innate.compendium-drop-target
-            h1.label(data-i18n=innate_spells) INNATE SPELLS
+            h1.label INNATE SPELLS
             +sort_select('spellinnate')
             +repeating_spell_section('spellinnate')
 
         .background-color.focus.compendium-drop-target
-            h1.label(data-i18n="focus_spells") FOCUS SPELLS
+            h1.label FOCUS SPELLS
             +sort_select('spellfocus')
             .focus-points-grid
-                h2(data-i18n="focus_points") FOCUS POINTS
+                h2 FOCUS POINTS
                 label.focus-pts-current(title="current focus points")
-                    span.sublabel.darkred(data-i18n="current") current
+                    span.sublabel.darkred current
                     input(type="number" name="attr_focus_points" value="0" title="@{focus_points}")
                 label.focus-pts-max(title="maximum focus points")
-                    span.sublabel.darkred(data-i18n="maximum") maximum
+                    span.sublabel.darkred maximum
                     input(type="number" name="attr_focus_points_max" value="0" title="@{focus_points_max}")
             +repeating_spell_section('spellfocus')
 
         .background-color.cantrips.compendium-drop-target
-            h1.label(data-i18n="cantrips") CANTRIPS
+            h1.label CANTRIPS
             +sort_select('cantrip')
             +repeating_spell_section('cantrip')
 
         .background-color.normalspells.compendium-drop-target
-            h1.label(data-i18n=spells) SPELLS
+            h1.label SPELLS
             +sort_select('normalspells')
             +repeating_spell_section('normalspells')
