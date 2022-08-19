@@ -65,7 +65,7 @@
 	}
 
 	div {
-		display         : inline-block;
+		display: inline-block;
 		vertical-align: top;
 		width: 100%;
 	}
@@ -319,19 +319,19 @@ input[name="attr_toggles"][value*="settings"] + div > button.sheet-settings-butt
     }
 }
 
-     /* HIDE PC SECTIONS NOT NEEDED ON NPC PAGE
-	----------------------------- */
-	@each $attribute in $attributes {
-		input[name="attr_toggles"][value*="#{$attribute}"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-#{$attribute}-row button.sheet-settings-button {
-       		@extend .sheet-highlight-button
-     	}
-    }
+/* HIDE PC SECTIONS NOT NEEDED ON NPC PAGE
+----------------------------- */
+@each $attribute in $attributes {
+	input[name="attr_toggles"][value*="#{$attribute}"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-#{$attribute}-row button.sheet-settings-button {
+		@extend .sheet-highlight-button;
+	}
+}
 
-    @each $skill in $skills {
-		input[name="attr_toggles"][value*="#{$skill}"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="#{$skill}"] {
-        	@extend .sheet-highlight-button
-      	}
-    }
+@each $skill in $skills {
+	input[name="attr_toggles"][value*="#{$skill}"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="#{$skill}"] {
+		@extend .sheet-highlight-button;
+	}
+}
 
 div.sheet-background-color {
 	background-color: $browntan;
@@ -2209,7 +2209,7 @@ input[name="attr_toggles"][value*="class_dc"] ~ div.sheet-character div.sheet-cl
 input[name="attr_toggles"][value*="shield"] ~ div.sheet-character div.sheet-armorclass div.sheet-shield-grid div.sheet-settings,
 input[name="attr_toggles"][value*="armor_class"] ~ div.sheet-character div.sheet-armorclass div.sheet-armorclass-main div.sheet-settings,
 input[name="attr_toggles"][value*="hitpoints"] ~ div.sheet-character div.sheet-hitpoints div.sheet-settings,
-input[name="attr_toggles"][value*="spell_attack"] ~ div.sheet-spells div.sheet-column div.sheet-spellattack div.sheet-settings,
+input[name="attr_toggles"][value*="spell_attack"] ~ div.sheet-spells div.sheet-column div.sheet-settings,
 input[name="attr_toggles"][value*="spell_dc"] ~ div.sheet-spells div.sheet-column div.sheet-spelldc div.sheet-settings,
 div.sheet-skills input[name="attr_toggles"][value*="settings"] ~ div.sheet-settings,
 div.sheet-inv-col input[name="attr_toggles"][value*="settings"] ~ div.sheet-settings,
@@ -2236,7 +2236,7 @@ input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-spell-display span.
 input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-inv-display span.sheet-collapse,
 input[name="attr_toggles"][value*="class_dc"] ~ div.sheet-character div.sheet-classdc div.sheet-settings,
 input[name="attr_toggles"][value*="shield"] ~ div.sheet-character div.sheet-armorclass div.sheet-shield-grid div.sheet-settings,
-input[name="attr_toggles"][value*="spell_attack"] ~ div.sheet-spells div.sheet-column div.sheet-spellattack div.sheet-settings,
+input[name="attr_toggles"][value*="spell_attack"] ~ div.sheet-spells div.sheet-column div.sheet-settings,
 input[name="attr_toggles"][value*="armor_class"] ~ div.sheet-character div.sheet-armorclass div.sheet-armorclass-main div.sheet-settings,
 input[name="attr_toggles"][value*="spell_dc"] ~ div.sheet-spells div.sheet-column div.sheet-spelldc div.sheet-settings,
 input[name="attr_toggles"][value*="hitpoints"] ~ div.sheet-character div.sheet-hitpoints div.sheet-settings,

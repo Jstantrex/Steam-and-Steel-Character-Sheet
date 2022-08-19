@@ -31,6 +31,11 @@ div.sheet-spellattack-grid {
     align-items: center;
     margin: 1% 0%;
 
+	label[data-i18n-title*="notes"] {
+		grid-column: 1 / -1;
+    	grid-row: 2;
+	}
+
     input[name="attr_spell_attack_key_ability"],
     input[name="attr_spell_attack_temporary"] {
         @extend %center-text;
@@ -61,9 +66,14 @@ div.sheet-spelldc-grid {
     align-items: center;
     margin: 1% 0%;
 
-    div.sheet-ability-select {
+    div.sheet-ability-select,
+	label[data-i18n-title*="rank"] {
         grid-row: 1;
     }
+
+	label[data-i18n-title*="notes"] {
+		grid-area: 2 / 1 / 2 / 6; 
+	}
 
     span.sheet-spelldc-base { font-size: 0.6em; }
 
