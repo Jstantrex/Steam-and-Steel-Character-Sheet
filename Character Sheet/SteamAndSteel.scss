@@ -666,7 +666,7 @@ div.sheet-npc-general-options button[name="act_toggle_npcspellcaster"] {
 
 /* inside the "Character Sheet" column */
 div.sheet-column {
-	h1[data-i18n="character_sheet"] {
+	h1[name="character_sheet"] {
 		background-color: transparent;
 		color: $reddish;
 		-webkit-text-fill-color: $reddish;
@@ -675,7 +675,7 @@ div.sheet-column {
 		width: 100%;
 	}
 
-	h2[data-i18n="proficiency"] {
+	h2[name="proficiency"] {
 		color          : $focusblue;
 		line-height    : inherit;
 		text-decoration: underline;
@@ -758,15 +758,11 @@ div.sheet-character-info {
 	}
 
 	label {
-		&[data-i18n-title="alignment"] { grid-area: 5 / 5 / 5 / 9;}
-		&[data-i18n-title="ancestry_heritage"] { grid-area: 2 / 1 / 2 / -1; }
-		&[data-i18n-title="background"] { grid-area: 4 / 7 / 4 / -1; }
-		&[data-i18n-title="character_name"] { grid-area: 1 / 1 / 1 / -1; }
-		&[data-i18n-title="class"] { grid-area: 4 / 1 / 4 / 7; }
-		&[data-i18n-title="deity"] { grid-area: 5 / 9 / 5 / -1;}
-		&[data-i18n-title="experience_points_xp"] { grid-area: 3 / 7 / 3 / -1; }
-		&[data-i18n-title="player_name"] { grid-area: 3 / 1 / 3 / 7; }
-		&[data-i18n-title="size"] { grid-area: 5 / 1 / 5 / 5; }
+		&[title="character name"] { grid-area: 1 / 1 / 1 / -1; }
+		&[title="player name"] { grid-area: 3 / 1 / 3 / 7; }
+		&[title="xp"] { grid-area: 3 / 7 / 3 / -1; }
+		&[title="class"] { grid-area: 4 / 1 / 4 / 7; }
+		&[title="alignment"] { grid-area: 4 / 7 / 4 / -1;}
 	}
 }
 
@@ -2123,7 +2119,6 @@ div.sheet-character,
 div.sheet-details,
 div.sheet-feats,
 div.sheet-inventory,
-div.sheet-spells,
 div.sheet-options,
 input[name="attr_sheet_type"][value*="npc"] ~ div.sheet-pc-info,
 input[name="attr_sheet_type"][value*="npc"] ~ div.sheet-tabs label:nth-of-type(1n+2)  {
