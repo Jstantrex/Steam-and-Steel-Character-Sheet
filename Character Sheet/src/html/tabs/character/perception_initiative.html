@@ -32,25 +32,6 @@
         <button class='perception-button' name='roll_PERCEPTION' type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=^{perception}}} {{roll01=[[1d20cs20cf1 + [@{perception_proficiency_display}] (@{perception})[@{text_modifier}] + (@{query_roll_bonus})[@{text_bonus}]]]}} {{roll01_type=perception}} {{notes_show=@{roll_show_notes}}} {{notes=@{perception_notes}}}'>perceive</button>
         <button class='perception-button' name='roll_INITIATIVE' type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=^{initiative}}} {{subheader=^{@{initiative_skill}}}}  {{roll01=[[1d20cs20cf1 + (@{initiative}) + (@{initiative_modifier})[@{text_modifier}] + (@{query_roll_bonus})[@{text_bonus}] &{tracker}]]}} {{roll01_type=initiative}}'>initiative</button>
         <input name='attr_initiative' type='hidden' value='@{perception}[perception]' />
-        <select class='simple' name='attr_initiative_skill' title='@{initiative_skill}' >
-            <option selected='selected' value='perception'>perception</option>
-            <option value='stealth'>stealth</option>
-            <option value='deception'>deception</option>
-            <option value='diplomacy'>diplomacy</option>
-            <option value='acrobatics'>acrobatics</option>
-            <option value='arcana'>arcana</option>
-            <option value='athletics'>athletics</option>
-            <option value='crafting' >crafting</option>
-            <option value='intimidation' >intimidation</option>
-            <option value='medicine'>medicine</option>
-            <option value='nature'>nature</option>
-            <option value='occultism'>occultism</option>
-            <option value='performance'>performance</option>
-            <option value='religion'>religion</option>
-            <option value='society'>society</option>
-            <option value='survival'>survival</option>
-            <option value='thievery'>thievery</option>
-        </select>
     </div>
     <div class='grid settings'>
         <div class='ability-select'>
