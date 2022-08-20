@@ -1103,13 +1103,13 @@ var modPf2 = (function () {
         let update = {};
         if((values["sheet_type"] || "").toLowerCase() != "npc") {
             update["class_dc_key_ability"] = getSelectAbilityModifier("class_dc_key", values, update_ability);
-            update["class_dc_proficiency"] = calcProficiency(values["class_dc_rank"], values["level"]);
+            update["class_dc_proficiency"] = Math.floor(parseInt(values["level"] / 2))
             update["class_dc_proficiency_display"] = calcProficiencyDisplay(values["class_dc_rank"]);
             update["class_dc"] = 10
                 + (parseInt(update["class_dc_key_ability"]) || 0)
-                + (parseInt(update["class_dc_proficiency"]) || 0)
                 + (parseInt(values["class_dc_item"]) || 0)
-                + (parseInt(values["class_dc_temporary"]) || 0);
+                + (parseInt(values["class_dc_temporary"]) || 0)
+				+ (Math.floor(parseInt(values["level"]) / 2) || 0);
         }
         return update;
     };
