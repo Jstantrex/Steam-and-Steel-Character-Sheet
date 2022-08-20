@@ -798,7 +798,7 @@ div.sheet-column {
 }
 
 div.sheet-character {
-	grid-template-columns: 2fr 2.5fr 1.5fr;
+	grid-template-columns: 1.5fr 2.5fr;
 	grid-template-rows: repeat(5, auto);
 	grid-column-gap: 0.5%;
 	padding: 0.5%;
@@ -1119,7 +1119,6 @@ div.sheet-armorclass {
 		span:first-child {
 			color: $white;
 			font-weight: bold;
-			text-transform: capitalize;
 		}
 	}
 }

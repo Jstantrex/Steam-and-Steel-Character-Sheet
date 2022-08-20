@@ -10,7 +10,7 @@ mixin ability_select(name, default_ability)
 
 mixin rank_select(name)
     select(class!=attributes.class name="attr_" + name + "_rank" title="@{" + name + "_rank}")
-        each rank, index in ["untrained", "trained", "expert", "master", "legendary"]
+        each rank, index in ["untrained", "level 1", "level 2", "level 3", "level 4", "level 5"]
             - const rankvalue = index * 2
             if index == 0
                 option(value=rankvalue selected="")=rank

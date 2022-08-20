@@ -261,25 +261,13 @@ var modPf2 = (function () {
     const calcProficiency = function(rank, level, misc) {
         let trng = (parseInt(rank) || 0);
         if(trng > 0) {
-            return (trng + (parseInt(level) || 0) + (parseInt(misc) || 0));
+            return (trng + (parseInt(misc) || 0));
         } else {
             return (parseInt(misc) || 0);
         }
     };
     const calcProficiencyDisplay = function(rank) {
         switch(parseInt(rank) || 0) {
-            case 2:
-                return (getTranslationByKey("trained") || "trained").charAt(0).toUpperCase();
-                break;
-            case 4:
-                return (getTranslationByKey("expert") || "expert").charAt(0).toUpperCase();
-                break;
-            case 6:
-                return (getTranslationByKey("master") || "master").charAt(0).toUpperCase();
-                break;
-            case 8:
-                return (getTranslationByKey("legendary") || "legendary").charAt(0).toUpperCase();
-                break;
             default:
                 return " ";
         }
@@ -911,7 +899,7 @@ var modPf2 = (function () {
             update[`${attr}_ability`] = ability;
             // Managing armor cap
             ability = Math.min(ability,parseInt((values[`${attr}_cap`] || "99")));
-            // Proficieny
+            // Proficiency
             update[`${attr}_proficiency`] = calcProficiency(values[`${attr}_dc_rank`], values["level"]);
             update[`${attr}_proficiency_display`] = calcProficiencyDisplay(values[`${attr}_dc_rank`]);
             // AC
@@ -921,8 +909,7 @@ var modPf2 = (function () {
                 + (parseInt(values[`${attr}_item`]) || 0)
                 + (parseInt(values[`${attr}_temporary`]) || 0);
             // Shield
-            update[`${attr}_shield`] = (parseInt(update[attr]) || 10)
-                + (parseInt(values[`${attr}_shield_ac_bonus`]) || 0)
+            update[`${attr}_shield`] = (parseInt(values[`${attr}_shield_ac_bonus`]) || 0)
                 + (parseInt(values[`${attr}_shield_temporary`]) || 0);
         }
         return update;
