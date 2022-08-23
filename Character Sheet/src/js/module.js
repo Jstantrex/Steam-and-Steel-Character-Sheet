@@ -18,7 +18,7 @@ var modPf2 = (function () {
         , "saves_fields": ["ability","ability_select","rank","proficiency","item","temporary"]
         , "ac": ["armor_class"]
         , "ac_fields": ["ability","ability_select","dc_rank","proficiency","item","temporary","dc_base","cap","shield_ac_bonus","shield_temporary"]
-        , "hit_points": ["hit_points_ancestry","hit_points_class","hit_points_other","hit_points_item"]
+        , "hit_points": ["hit_points_ancestry","hit_points_class","hit_points_other","hit_points_item","constitution"]
         , "repeating_attacks": ["melee-strikes","ranged-strikes"]
         , "attacks_fields": ["weapon","weapon_ability_select","weapon_ability","weapon_proficiency","weapon_rank","weapon_item","weapon_temporary","weapon_traits","damage_dice","damage_dice_size","damage_ability_select","damage_ability","damage_b","damage_p","damage_s","damage_weapon_specialization","damage_temporary","damage_other","damage_effects","damage_additional"]
         , "perception": ["perception_ability_select","perception_ability","perception_rank","perception_proficiency","perception_item","perception_temporary"]
@@ -918,7 +918,7 @@ var modPf2 = (function () {
     // === HIT POINTS (HP)
     const updateHitPoints = function(attr, callback) {
         console.log(`%c Update HP ${attr}`, "color:purple;font-size:14px;");
-        let fields = ["sheet_type","level"];
+        let fields = ["sheet_type","level","constitution"];
         fields.push(...global_attributes_by_category["ability_modifiers"],...global_attributes_by_category["hit_points"]);
         getAttrs(fields, (values) => {
             setAttrs(calcHitPoints(values), {silent: true}, () => {
@@ -931,12 +931,7 @@ var modPf2 = (function () {
     const calcHitPoints = function(values) {
         let update = {};
         if((values["sheet_type"] || "").toLowerCase() != "npc") {
-            update["hit_points_max"] = (parseInt(values[`hit_points_ancestry`]) || 0)
-                + ((
-                    (parseInt(values[`hit_points_class`]) || 0)
-                    +
-                    (parseInt(values[`constitution_modifier`]) || 0)
-                ) * (parseInt(values[`level`]) || 1))
+            update["hit_points_max"] = (2 * parseInt(values[`constitution`]))
                 + (parseInt(values[`hit_points_other`]) || 0)
                 + (parseInt(values[`hit_points_item`]) || 0);
         }

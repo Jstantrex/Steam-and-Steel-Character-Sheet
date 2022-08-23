@@ -60,26 +60,26 @@
             <span class='sublabel darkred' >temporary</span>
             <input name='attr_hit_points_temporary' placeholder='0' spellcheck='false' title='@{hit_points_temporary}' type='text' value='' />
         </label>
-        <label title='hit points dying'>
+        <!-- <label title='hit points dying'>
             <span class='sublabel darkred' >dying</span>
             <input name='attr_hit_points_dying' placeholder='0' spellcheck='false' title='@{hit_points_dying}' type='text' value='' />
         </label>
         <label title='hit points wounded'>
             <span class='sublabel darkred' >wounded</span>
             <input name='attr_hit_points_wounded' placeholder='0' spellcheck='false' title='@{hit_points_wounded}' type='text' value='' />
-        </label>
+        </label> -->
     </div>
     <div class='grid settings'>
-        <label class='sublabel' title='hit points from ancestry'>
+        <!-- <label class='sublabel' title='hit points from ancestry'>
             <span class='sublabel darkred' >ancestry</span>
             <input name='attr_hit_points_ancestry' placeholder='0' spellcheck='false' title='@{hit_points_ancestry}' type='text' value='' />
         </label>
         <label class='sublabel' title='hit points from class'>
             <span class='sublabel darkred' >class</span>
             <input class='3em' name='attr_hit_points_class' placeholder='0' spellcheck='false' title='@{hit_points_class}' type='text' value='' />
-        </label>
+        </label> -->
         <label class='sublabel' title='hit points permanent bonus from other sources like feats and class features'>
-            <span class='sublabel darkred' >other</span>
+            <span class='sublabel darkred' >bonus</span>
             <input class='3em' name='attr_hit_points_other' placeholder='0' spellcheck='false' title='@{hit_points_other}' type='text' value='' />
         </label>
         <label class='sublabel' title='hit points bonus from items'>
@@ -523,16 +523,6 @@
                         <input name='attr_weapon_ability' placeholder='0' spellcheck='false' title='@{weapon_ability}' type='text' value='0' />
                     </label>
                 </div>
-                <label title='melee weapon strike rank'>
-                    <span class='sublabel darkred' >rank</span>
-                    <select name='attr_weapon_rank' title='@{weapon_rank}'>
-                        <option value='0' selected>untrained</option>
-                        <option value='2'>trained</option>
-                        <option value='4'>expert</option>
-                        <option value='6'>master</option>
-                        <option value='8'>legendary</option>
-                    </select>
-                </label>
                 <label class='sublabel' title='melee weapon strike item'>
                     <span class='sublabel darkred' >item</span>
                     <input name='attr_weapon_item' placeholder='0' spellcheck='false' title='@{weapon_item}' type='text' value='0' />
@@ -687,10 +677,11 @@
                     <span class='sublabel darkred' >rank</span>
                     <select name='attr_weapon_rank' title='@{weapon_rank}'>
                         <option value='0' selected>untrained</option>
-                        <option value='2'>trained</option>
-                        <option value='4'>expert</option>
-                        <option value='6'>master</option>
-                        <option value='8'>legendary</option>
+						<option value='2'>Level 1</option>
+						<option value='4'>Level 2</option>
+						<option value='6'>Level 3</option>
+						<option value='8'>Level 4</option>
+						<option value='10'>Level 5</option>
                     </select>
                 </label>
                 <label class='sublabel' title='range weapon item'>
@@ -746,7 +737,7 @@
                     <span >b</span>
                     <input name='attr_damage_b' title='@{damage_b}' type='checkbox' value='1' />
                 </label>
-                <label ' title='range piercing damage'>
+                <label title='range piercing damage'>
                     <span >p</span>
                     <input name='attr_damage_p' title='@{damage_p}' type='checkbox' value='1' />
                 </label>
@@ -789,20 +780,22 @@
         <label title='simple weapon proficiencies rank'>
             <select name='attr_weapon_proficiencies_simple_rank' title='@{weapon_proficiencies_simple_rank}'>
                 <option value='0' selected>untrained</option>
-                <option value='2'>trained</option>
-                <option value='4'>expert</option>
-                <option value='6'>master</option>
-                <option value='8'>legendary</option>
+                <option value='2'>Level 1</option>
+                <option value='4'>Level 2</option>
+                <option value='6'>Level 3</option>
+                <option value='8'>Level 4</option>
+                <option value='10'>Level 5</option>
             </select>
         </label>
         <h2 >martial</h2>
         <label title='martial weapon proficiencies rank'>
             <select name='attr_weapon_proficiencies_martial_rank' title='@{weapon_proficiencies_martial_rank}'>
                 <option value='0' selected>untrained</option>
-                <option value='2'>trained</option>
-                <option value='4'>expert</option>
-                <option value='6'>master</option>
-                <option value='8'>legendary</option>
+                <option value='2'>Level 1</option>
+                <option value='4'>Level 2</option>
+                <option value='6'>Level 3</option>
+                <option value='8'>Level 4</option>
+                <option value='10'>Level 5</option>
             </select>
         </label>
     </div>
@@ -816,10 +809,11 @@
             <label title='other weapon proficiencies rank'>
                 <select name='attr_weapon_proficiencies_other_rank' title='@{weapon_proficiencies_other_rank}'>
                     <option value='0' selected>untrained</option>
-                    <option value='2'>trained</option>
-                    <option value='4'>expert</option>
-                    <option value='6'>master</option>
-                    <option value='8'>legendary</option>
+					<option value='2'>Level 1</option>
+					<option value='4'>Level 2</option>
+					<option value='6'>Level 3</option>
+					<option value='8'>Level 4</option>
+					<option value='10'>Level 5</option>
                 </select>
             </label>
         </div>
@@ -857,7 +851,7 @@
     </div>
 </div>
 </div><div class="column"><div class="armorclass background-color"><!--- ARMOR CLASS column --->
-<h1>armor class</h1>
+<h1>defense score</h1>
 <!---AC Base row -->
 <div class='grid armorclass-main'>
     <button class='pictos settings-button' name='act_toggle_armor_class' title='armor class settings' type='action'>
@@ -879,7 +873,7 @@
             <span class='sublabel darkred'>mod</span>
             <span name='attr_armor_class_ability' title='@{armor_class_ability}'></span>
         </label>
-        <span >or</span>
+        <span title="or">or</span>
         <div>
             <label class='sublabel' title='cap'>
                 <span class='sublabel darkred' >cap</span>
@@ -1269,38 +1263,6 @@
             </fieldset>
         </div>
 
-        <div class="feats-skill-grid background-color">
-            <h1 >skill feats</h1>
-            <fieldset class="repeating_feat-skill">
-                <input class="toggles" name="attr_toggles" type="hidden" value="display,settings," />
-                <div class="grid repeating-grid-display feat-border">
-                    <button class="pictos settings-button" name="act_settings" title="feat skill settings" type="action">
-                        y
-                    </button>
-                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_skill}}} {{subheader=^{skill_feats}}} {{info01_name=^{level}}} {{info01=@{feat_skill_level}}} {{desc=@{feat_skill_notes}}}"><span name= "attr_feat_skill"></span></button>
-                    <span name="attr_feat_skill_level"></span>
-                    <button name="act_collapse" title="show or hide feat skill description" type="action">
-                        4
-                    </button>
-                    <span class="collapse" name="attr_feat_skill_notes"></span>
-                </div>
-                <div class="grid feats-repeating-grid settings">
-                    <label class="sublabel" title="skill feat">
-                        <span class="sublabel darkred" >name</span>
-                        <input name="attr_feat_skill" placeholder="name" spellcheck="false" title="@{feat_skill}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="skill feat level">
-                        <span class="sublabel darkred" >level</span>
-                        <input name="attr_feat_skill_level" placeholder="1st" spellcheck="false" title="@{feat_skill_level}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="skill feat description">
-                        <span class="sublabel darkred" >description</span>
-                        <textarea name="attr_feat_skill_notes" placeholder="description" spellcheck="false" title="@{feat_skill_notes}" value=""></textarea>
-                    </label>
-                </div>
-            </fieldset>
-        </div>
-
         <div class="feats-general-grid background-color">
             <h1 >general feats</h1>
             <fieldset class="repeating_feat-general">
@@ -1367,33 +1329,6 @@
                     <label class="sublabel" title="class feat description">
                         <span class="sublabel darkred" >description</span>
                         <textarea name="attr_feat_class_notes" placeholder="description" spellcheck="false" title="@{feat_class_notes}" value=""></textarea>
-                    </label>
-                </div>
-            </fieldset>
-        </div>
-
-        <div class="feats-bonus-grid background-color">
-            <h1 >bonus feats</h1>
-            <fieldset class="repeating_feat-bonus">
-                <input class="toggles" name="attr_toggles" type="hidden" value="display,settings," />
-                <div class="grid repeating-grid-display feat-border">
-                    <button class="pictos settings-button" name="act_settings" title="feat bonus settings"  type="action">
-                        y
-                    </button>
-                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_bonus}}} {{subheader=^{bonus_feats}}} {{desc=@{feat_bonus_notes}}}"><span name= "attr_feat_bonus"></span></button>
-                    <button name="act_collapse" title="show or hide feat bonus description" type="action">
-                        4
-                    </button>
-                    <span class="collapse" name="attr_feat_bonus_notes"></span>
-                </div>
-                <div class="grid feats-repeating-grid settings">
-                    <label class="sublabel"  title="bonus feat">
-                        <span class="sublabel darkred"  >name</span>
-                        <input name="attr_feat_bonus" placeholder="name" spellcheck="false" title="@{feat_bonus}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="bonus feat description">
-                        <span class="sublabel darkred"  >description</span>
-                        <textarea name="attr_feat_bonus_notes" placeholder="description" spellcheck="false" title="@{feat_bonus_notes}" value=""></textarea>
                     </label>
                 </div>
             </fieldset>
@@ -1924,7 +1859,7 @@ var modPf2 = (function () {
         , "saves_fields": ["ability","ability_select","rank","proficiency","item","temporary"]
         , "ac": ["armor_class"]
         , "ac_fields": ["ability","ability_select","dc_rank","proficiency","item","temporary","dc_base","cap","shield_ac_bonus","shield_temporary"]
-        , "hit_points": ["hit_points_ancestry","hit_points_class","hit_points_other","hit_points_item"]
+        , "hit_points": ["hit_points_ancestry","hit_points_class","hit_points_other","hit_points_item","constitution"]
         , "repeating_attacks": ["melee-strikes","ranged-strikes"]
         , "attacks_fields": ["weapon","weapon_ability_select","weapon_ability","weapon_proficiency","weapon_rank","weapon_item","weapon_temporary","weapon_traits","damage_dice","damage_dice_size","damage_ability_select","damage_ability","damage_b","damage_p","damage_s","damage_weapon_specialization","damage_temporary","damage_other","damage_effects","damage_additional"]
         , "perception": ["perception_ability_select","perception_ability","perception_rank","perception_proficiency","perception_item","perception_temporary"]
@@ -2824,7 +2759,7 @@ var modPf2 = (function () {
     // === HIT POINTS (HP)
     const updateHitPoints = function(attr, callback) {
         console.log(`%c Update HP ${attr}`, "color:purple;font-size:14px;");
-        let fields = ["sheet_type","level"];
+        let fields = ["sheet_type","level","constitution"];
         fields.push(...global_attributes_by_category["ability_modifiers"],...global_attributes_by_category["hit_points"]);
         getAttrs(fields, (values) => {
             setAttrs(calcHitPoints(values), {silent: true}, () => {
@@ -2837,12 +2772,7 @@ var modPf2 = (function () {
     const calcHitPoints = function(values) {
         let update = {};
         if((values["sheet_type"] || "").toLowerCase() != "npc") {
-            update["hit_points_max"] = (parseInt(values[`hit_points_ancestry`]) || 0)
-                + ((
-                    (parseInt(values[`hit_points_class`]) || 0)
-                    +
-                    (parseInt(values[`constitution_modifier`]) || 0)
-                ) * (parseInt(values[`level`]) || 1))
+            update["hit_points_max"] = (2 * parseInt(values[`constitution`]))
                 + (parseInt(values[`hit_points_other`]) || 0)
                 + (parseInt(values[`hit_points_item`]) || 0);
         }

@@ -377,6 +377,7 @@ input.sheet-circle {
 	border-radius   : 100%;
 	text-align      : center;
 	overflow		: hidden;
+	margin-left     : 4px;
 }
 
 div.sheet-circle {
@@ -536,12 +537,12 @@ div.sheet-dcbase:nth-of-type(2) {
 	}
 
 	span[name="attr_ac_ability_display"],
-	span[data-i18n="or"] {
+	span[title="or"] {
 		background-color: $white;
 		border: 1px solid $reddish;
 	}
 
-	span[data-i18n="or"] {
+	span[title="or"] {
 		text-transform: uppercase;
 		color: $reddish;
 	}
@@ -807,7 +808,7 @@ div.sheet-character {
 		margin-bottom: 5px;
 	}
 
-	div.sheet-settings label[data-i18n-title*="notes"],
+	div.sheet-settings label[title*="notes"],
 	.sheet-oneliner {
 		grid-column: 1 / -1;
 	}
@@ -1056,7 +1057,7 @@ div.sheet-armorclass {
 		display              : grid;
 		grid-template-columns: 2fr 1fr 3fr;
 
-		span[data-i18n="or"] {
+		span[title="or"] {
 			color: $white;
 			font-size: 0.8em;
 			font-weight: bold;
@@ -1189,7 +1190,7 @@ div.sheet-hitpoints {
 	}
 
 	div.sheet-settings {
-		grid-template-columns: 2fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		padding-bottom       : 0em;
 
 		input[name="attr_hit_points_ancestry"] {
