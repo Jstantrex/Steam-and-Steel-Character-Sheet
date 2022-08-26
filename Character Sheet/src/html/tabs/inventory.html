@@ -74,7 +74,7 @@
         <div class="column worn-items">
             <div class="grid inv-display-grid">
                 <h2 >worn item</h2>
-                <h2 >invest <br /> (max 10)</h2>
+                <h2 >material</h2>
                 <h2 >bulk</h2>
                 <h2 >qty</h2>
             </div>
@@ -101,8 +101,8 @@
                         <input name="attr_worn_item" placeholder="name" spellcheck="false" title="@{worn_item}" type="text" value="" />
                     </label>
                     <label class="inv-invest" title="work item invest (max 10)">
-                        <span >invest</span>
-                        <input name="attr_worn_invest" placeholder="0" spellcheck="false" title="@{worn_invest}" type="text" value="" />
+                        <span >material</span>
+                        <input name="attr_worn_invest" placeholder="material" spellcheck="false" title="@{worn_invest}" type="text" value="" />
                     </label>
                     <label class="inv-bulk" title="worn item bulk">
                         <span >bulk</span>
@@ -167,7 +167,7 @@
                             y
                         </button>
                         <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{other_item}}} {{subheader=^{other_items}}} {{info01_name=^{bulk}}} {{info01=@{other_bulk}}} {{info02_name=^{quantity}}} {{info02=@{other_quantity}}} {{notes_show=[[1]]}} {{notes=@{other_item_notes}}}">
-                            <span name= "attr_other_item"></span>
+                            <span name="attr_other_item"></span>
                         </button>
                         <span class="inv-bulk" name="attr_other_bulk"></span>
                         <input class="" name="attr_other_quantity" title="@{other_quantity}" type="number" value="1" />

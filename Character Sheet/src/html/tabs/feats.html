@@ -1,38 +1,49 @@
 <div class="feats">
     <div class="column">
         <div class="feats-ancestry-grid background-color">
-            <h1 >ancestry feats and abilities</h1>
+            <h1 >traits</h1>
             <fieldset class="repeating_feat-ancestry">
                 <input class="toggles" name="attr_toggles" type="hidden" value="display,settings," />
                 <div class="grid repeating-grid-display feat-border">
-                    <button class="pictos settings-button"  name="act_settings" title="feat ancestry settings" type="action">
+                    <button class="pictos settings-button" name="act_settings" title="feat ancestry settings" type="action">
                         y
                     </button>
-                    <button class="h2" name="roll_ACTION" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_ancestry}}} {{subheader=^{ancestry_feats_and_abilities}}} {{info01_name=^{type}}} {{info01=@{feat_ancestry_type}}} {{info02_name=^{level}}} {{info02=@{feat_ancestry_level}}} {{desc=@{feat_ancestry_notes}}}"><span name= "attr_feat_ancestry"></span></button>
-                    <span name="attr_feat_ancestry_type"></span>
-                    <span name="attr_feat_ancestry_level"></span>
+                    <button class="h2" name="roll_ACTION" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_ancestry}}} {{info01_name=^{type}}} {{info01=@{feat_ancestry_type}}} {{info02_name=^{level}}} {{info02=@{feat_ancestry_level}}} {{desc=@{feat_ancestry_notes}}}"><span name= "attr_feat_ancestry"></span></button>
+                    <input name="attr_feat_ancestry_uses" spellcheck="false" title="@{feat_ancestry_uses}" type="text" value="" />
+					<span>/</span>
+					<span name="attr_feat_ancestry_uses_max"></span>
                     <button name="act_collapse" title="show or hide feat ancestry description" type="action">
                         4
                     </button>
                     <span class="collapse" name="attr_feat_ancestry_notes"></span>
                 </div>
                 <div class="grid feats-repeating-grid settings">
-                    <label class="sublabel"  title="ancestry feat and abilities">
-                        <span class="sublabel darkred" >name</span>
-                        <input name="attr_feat_ancestry" placeholder="name" spellcheck="false" title="@{feat_ancestry}" type="text" value="" />
-                    </label>
-                    <label class="sublabel"  title="ancestry feat type">
-                        <span class="sublabel darkred" >type</span>
-                        <input name="attr_feat_ancestry_type" placeholder="special" spellcheck="false" title="@{feat_ancestry_type}" type="text" value="" />
-                    </label>
-                    <label class="sublabel"  title="ancestry feat level">
-                        <span class="sublabel darkred" >level</span>
-                        <input name="attr_feat_ancestry_level" placeholder="1st" spellcheck="false" title="@{feat_ancestry_level}" type="text" value="" />
-                    </label>
-                    <label class="sublabel"  title="ancestry feat description">
-                        <span class="sublabel darkred" >description</span>
-                        <textarea name="attr_feat_ancestry_notes" placeholder="description" spellcheck="false" title="@{feat_ancestry_notes}" value=""></textarea>
-                    </label>
+					<label class="sublabel"  title="ancestry feat and abilities">
+						<span class="sublabel darkred" >name</span>
+						<input name="attr_feat_ancestry" placeholder="name" spellcheck="false" title="@{feat_ancestry}" type="text" value="" />
+					</label>
+					<label class="sublabel"  title="ancestry feat type">
+						<span class="sublabel darkred" >prereq</span>
+						<input name="attr_feat_ancestry_type" placeholder="prereq" spellcheck="false" title="@{feat_ancestry_type}" type="text" value="" />
+					</label>
+					<label class="sublabel"  title="ancestry feat level">
+						<span class="sublabel darkred" >level</span>
+						<input name="attr_feat_ancestry_level" placeholder="1st" spellcheck="false" title="@{feat_ancestry_level}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="class feat uses">
+						<span class="sublabel darkred" >uses</span>
+						<input name="attr_feat_ancestry_uses" spellcheck="false" title="@{feat_ancestry_uses}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="class feat max uses">
+						<span class="sublabel darkred" >max uses</span>
+						<input name="attr_feat_ancestry_uses_max" spellcheck="false" title="@{feat_ancestry_uses_max}" type="text" value="" />
+					</label>
+					<div>
+						<label class="sublabel"  title="ancestry feat description">
+							<span class="sublabel darkred" >description</span>
+							<textarea name="attr_feat_ancestry_notes" placeholder="description" spellcheck="false" title="@{feat_ancestry_notes}" value=""></textarea>
+						</label>
+					</div>
                 </div>
             </fieldset>
         </div>
@@ -42,29 +53,45 @@
             <fieldset class="repeating_feat-general">
                 <input class="toggles" name="attr_toggles" type="hidden" value="display,settings," />
                 <div class="grid repeating-grid-display feat-border">
-                    <button class="pictos settings-button"  name="act_settings" title="feat general settings" type="action">
+                    <button class="pictos settings-button" name="act_settings" title="feat general settings" type="action">
                         y
                     </button>
-                     <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_general}}} {{subheader=^{general_feats}}} {{info01_name=^{level}}} {{info01=@{feat_general_level}}} {{desc=@{feat_general_notes}}}"><span name= "attr_feat_general"></span></button>
-                    <span name="attr_feat_general_level"></span>
+					<button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_general}}} {{info01_name=^{level}}} {{info01=@{feat_general_level}}} {{desc=@{feat_general_notes}}}"><span name= "attr_feat_general"></span></button>
+					<input name="attr_feat_general_uses" placeholder="1st" spellcheck="false" title="@{feat_general_uses}" type="text" value="" />
+					<span>/</span>
+					<span name="attr_feat_general_uses_max"></span>
                     <button name="act_collapse"  title="show or hide feat general description" type="action">
                         4
                     </button>
                     <span class="collapse" name="attr_feat_general_notes"></span>
                 </div>
                 <div class="grid feats-repeating-grid settings">
-                    <label class="sublabel" title="general feat">
-                        <span class="sublabel darkred" >name</span>
-                        <input name="attr_feat_general" placeholder="name" spellcheck="false" title="@{feat_general}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="general feat level">
-                        <span class="sublabel darkred" >level</span>
-                        <input name="attr_feat_general_level" placeholder="1st" spellcheck="false" title="@{feat_general_level}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="general feat description">
-                        <span class="sublabel darkred" >description</span>
-                        <textarea name="attr_feat_general_notes" placeholder="description" spellcheck="false" title="@{feat_general_notes}" value=""></textarea>
-                    </label>
+					<label class="sublabel" title="general feat">
+						<span class="sublabel darkred" >name</span>
+						<input name="attr_feat_general" placeholder="name" spellcheck="false" title="@{feat_general}" type="text" value="" />
+					</label>
+					<label class="sublabel"  title="ancestry feat type">
+						<span class="sublabel darkred" >prereq</span>
+						<input name="attr_feat_general_type" placeholder="prereq" spellcheck="false" title="@{feat_ancestry_type}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="general feat level">
+						<span class="sublabel darkred" >level</span>
+						<input name="attr_feat_general_level" placeholder="1st" spellcheck="false" title="@{feat_general_level}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="class feat uses">
+						<span class="sublabel darkred" >uses</span>
+						<input name="attr_feat_general_uses" placeholder="1st" spellcheck="false" title="@{feat_general_uses}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="class feat max uses">
+						<span class="sublabel darkred" >max uses</span>
+						<input name="attr_feat_general_uses_max" placeholder="1st" spellcheck="false" title="@{feat_general_uses_max}" type="text" value="" />
+					</label>
+					<div>
+						<label class="sublabel" title="general feat description">
+							<span class="sublabel darkred" >description</span>
+							<textarea name="attr_feat_general_notes" placeholder="description" spellcheck="false" title="@{feat_general_notes}" value=""></textarea>
+						</label>
+					</div>
                 </div>
             </fieldset>
         </div>
@@ -72,38 +99,45 @@
 
     <div class="column">
         <div class="feats-class-grid background-color">
-            <h1 >class feats and abilities</h1>
+            <h1 >class features</h1>
             <fieldset class="repeating_feat-class">
                 <input class="toggles" name="attr_toggles" type="hidden" value="display,settings," />
                 <div class="grid repeating-grid-display feat-border">
                     <button class="pictos settings-button" name="act_settings" title="feat class settings" type="action">
                         y
                     </button>
-                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_class}}} {{subheader=^{class_feats_and_abilities}}} {{info01_name=^{type}}} {{info01=@{feat_class_type}}} {{info02_name=^{level}}} {{info02=@{feat_class_level}}} {{desc=@{feat_class_notes}}}"><span name= "attr_feat_class"></span></button>
-                    <span name="attr_feat_class_type"></span>
-                    <span name="attr_feat_class_level"></span>
+                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{feat_class}}} {{info01_name=^{type}}} {{info02_name=^{level}}} {{info02=@{feat_class_level}}} {{desc=@{feat_class_notes}}}"><span name= "attr_feat_class"></span></button>
+                    <input name="attr_feat_class_uses" placeholder="1st" spellcheck="false" title="@{feat_class_uses}" type="text" value="" />
+					<span>/</span>
+					<span name="attr_feat_class_uses_max"></span>
                     <button name="act_collapse"  title="show or hide feat class description" type="action">
                         4
                     </button>
                     <span class="collapse" name="attr_feat_class_notes"></span>
                 </div>
                 <div class="grid feats-repeating-grid settings">
-                    <label class="sublabel" title="class feats and abilities">
-                        <span class="sublabel darkred" >name</span>
-                        <input name="attr_feat_class" placeholder="name" spellcheck="false" title="@{feat_class}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="class feat type">
-                        <span class="sublabel darkred" >type</span>
-                        <input name="attr_feat_class_type" placeholder="special" spellcheck="false" title="@{feat_class_type}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="class feat level">
-                        <span class="sublabel darkred" >level</span>
-                        <input name="attr_feat_class_level" placeholder="1st" spellcheck="false" title="@{feat_class_level}" type="text" value="" />
-                    </label>
-                    <label class="sublabel" title="class feat description">
-                        <span class="sublabel darkred" >description</span>
-                        <textarea name="attr_feat_class_notes" placeholder="description" spellcheck="false" title="@{feat_class_notes}" value=""></textarea>
-                    </label>
+					<label class="sublabel" title="class abilities">
+						<span class="sublabel darkred" >name</span>
+						<input name="attr_feat_class" placeholder="name" spellcheck="false" title="@{feat_class}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="class feat level">
+						<span class="sublabel darkred" >level</span>
+						<input name="attr_feat_class_level" placeholder="1st" spellcheck="false" title="@{feat_class_level}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="class feat uses">
+						<span class="sublabel darkred" >uses</span>
+						<input name="attr_feat_class_uses" placeholder="1st" spellcheck="false" title="@{feat_class_uses}" type="text" value="" />
+					</label>
+					<label class="sublabel" title="class feat max uses">
+						<span class="sublabel darkred" >max uses</span>
+						<input name="attr_feat_class_uses_max" placeholder="1st" spellcheck="false" title="@{feat_class_uses_max}" type="text" value="" />
+					</label>
+					<div>
+						<label class="sublabel" title="class feat description">
+							<span class="sublabel darkred" >description</span>
+							<textarea name="attr_feat_class_notes" placeholder="description" spellcheck="false" title="@{feat_class_notes}" value=""></textarea>
+						</label>
+					</div>
                 </div>
             </fieldset>
         </div>

@@ -1011,9 +1011,9 @@ div.sheet-speed {
 		text-align: center;
 	}
 
-	label[data-i18n-title="speed_in_feet"] { padding: 0.5em 0.2em; }
+	label[title="speed_in_feet"] { padding: 0.5em 0.2em; }
 
-	span[data-i18n="feet"] {
+	span[title="feet"] {
 		color         : $white;
 		font-family   : initial;
 		text-align    : center;
@@ -1758,7 +1758,7 @@ div.sheet-feats {
 div.sheet-repeating-grid-display {
 	color: $black;
 	grid-column-gap      : 1%;
-	grid-template-columns: 1fr 10fr 4fr 2fr 1fr;
+	grid-template-columns: 1fr 10fr 4fr 2fr 2fr 1fr;
 	margin               : 0;
 	width                : 100%;
 	padding: 5px;
@@ -1830,12 +1830,12 @@ div.sheet-feats-repeating-grid {
 }
 
 div.sheet-feats-ancestry-grid button[type="roll"],
+div.sheet-feats-general-grid button[type="roll"], 
 div.sheet-feats-class-grid button[type="roll"] {
 	grid-column: 1 / 3;
 }
 
-div.sheet-feats-skill-grid button[type="roll"],
-div.sheet-feats-general-grid button[type="roll"] {
+div.sheet-feats-skill-grid button[type="roll"] {
 	grid-column: 1 / 4;
 }
 
@@ -2018,17 +2018,12 @@ div.sheet-inv-display-grid {
 	}
 
 	button[type="roll"] {
-		grid-column: 1 / 3;
+		grid-column: 1 / 2;
 	}
 
 	h2 {
 		line-height: 1.5em;
 		text-align: center;
-
-		&[data-i18n="readied_items"],
-		&[data-i18n="other_items"] {
-			grid-column: 1 / 3;
-		}
 	}
 
 	input[name*="quantity"] {
@@ -2062,7 +2057,7 @@ div.sheet-inv-display-grid {
 	}
 
 	&.sheet-display-grid-other span.sheet-inv-name {
-		grid-column: 1 / 3;
+		grid-column: 1 / 2;
 	}
 }
 
