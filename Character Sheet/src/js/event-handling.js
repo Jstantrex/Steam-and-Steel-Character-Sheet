@@ -111,9 +111,15 @@ on("change:level", (eventinfo) => {
 //Modifier calculators
 modPf2.getAttrNames(['abilities']).forEach(attr => {
     on(`change:${attr}_score change:${attr}_score_temporary change:${attr}_modifier_temporary`, (eventinfo) => {
-        // console.table(eventinfo);
+        //console.table(eventinfo);
         modPf2.updateAbility(attr);
     });
+	on(`change:${attr}_tenacity_mod`, (eventinfo) => {
+		modPf2.updateTenacity(attr);
+	})
+	on(`change:${attr}_tenacity`, (eventinfo) => {
+		modPf2.updateTenacityDrain();
+	})
 });
 //Update ability inputs with the appropriate selectable modifier
 modPf2.getAttrNames(['select_attributes']).forEach(attr => {

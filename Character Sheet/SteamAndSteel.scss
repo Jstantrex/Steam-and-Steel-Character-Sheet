@@ -1080,19 +1080,6 @@ div.sheet-armorclass {
 		text-align           : center;
 	}
 
-	/* Shield row in Armor Class */
-	div.sheet-shield-grid {
-		display              : grid;
-		grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr 3fr;
-		text-align           : center;
-		grid-column-gap      : 1%;
-
-		div.sheet-settings {
-			grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
-			grid-column: 1 / 7;
-		}
-	}
-
 	div.sheet-shield-hp {
 		display: grid;
 		grid-template-columns: 2fr 1fr 2fr;
@@ -1187,6 +1174,17 @@ div.sheet-hitpoints {
 		margin-top: 1%;
 
 		input { @extend %center-text; }
+	}
+
+	/* Shield row in Armor Class */
+	div.sheet-shield-grid {
+		display              : grid;
+		text-align           : center;
+		grid-column-gap      : 1%;
+
+		div.sheet-settings {
+			grid-column: 1 / 7;
+		}
 	}
 
 	div.sheet-settings {
@@ -2196,7 +2194,7 @@ input[name="attr_toggles"][value*="details"] ~ div.sheet-details {
 
 %toggle-height-auto,
 input[name="attr_toggles"][value*="class_dc"] ~ div.sheet-character div.sheet-classdc div.sheet-settings,
-input[name="attr_toggles"][value*="shield"] ~ div.sheet-character div.sheet-armorclass div.sheet-shield-grid div.sheet-settings,
+input[name="attr_toggles"][value*="shield"] ~ div.sheet-character div.sheet-hitpoints div.sheet-shield-grid div.sheet-settings,
 input[name="attr_toggles"][value*="armor_class"] ~ div.sheet-character div.sheet-armorclass div.sheet-armorclass-main div.sheet-settings,
 input[name="attr_toggles"][value*="hitpoints"] ~ div.sheet-character div.sheet-hitpoints div.sheet-settings,
 input[name="attr_toggles"][value*="spell_attack"] ~ div.sheet-spells div.sheet-column div.sheet-settings,
@@ -2225,7 +2223,7 @@ input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-grid-display span.s
 input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-spell-display span.sheet-collapse,
 input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-inv-display span.sheet-collapse,
 input[name="attr_toggles"][value*="class_dc"] ~ div.sheet-character div.sheet-classdc div.sheet-settings,
-input[name="attr_toggles"][value*="shield"] ~ div.sheet-character div.sheet-armorclass div.sheet-shield-grid div.sheet-settings,
+input[name="attr_toggles"][value*="shield"] ~ div.sheet-character div.sheet-hitpoints div.sheet-shield-grid div.sheet-settings,
 input[name="attr_toggles"][value*="spell_attack"] ~ div.sheet-spells div.sheet-column div.sheet-settings,
 input[name="attr_toggles"][value*="armor_class"] ~ div.sheet-character div.sheet-armorclass div.sheet-armorclass-main div.sheet-settings,
 input[name="attr_toggles"][value*="spell_dc"] ~ div.sheet-spells div.sheet-column div.sheet-spelldc div.sheet-settings,

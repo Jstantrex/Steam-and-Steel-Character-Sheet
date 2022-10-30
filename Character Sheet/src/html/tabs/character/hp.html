@@ -19,24 +19,8 @@
             <span class='sublabel darkred' >temporary</span>
             <input name='attr_hit_points_temporary' placeholder='0' spellcheck='false' title='@{hit_points_temporary}' type='text' value='' />
         </label>
-        <!-- <label title='hit points dying'>
-            <span class='sublabel darkred' >dying</span>
-            <input name='attr_hit_points_dying' placeholder='0' spellcheck='false' title='@{hit_points_dying}' type='text' value='' />
-        </label>
-        <label title='hit points wounded'>
-            <span class='sublabel darkred' >wounded</span>
-            <input name='attr_hit_points_wounded' placeholder='0' spellcheck='false' title='@{hit_points_wounded}' type='text' value='' />
-        </label> -->
     </div>
     <div class='grid settings'>
-        <!-- <label class='sublabel' title='hit points from ancestry'>
-            <span class='sublabel darkred' >ancestry</span>
-            <input name='attr_hit_points_ancestry' placeholder='0' spellcheck='false' title='@{hit_points_ancestry}' type='text' value='' />
-        </label>
-        <label class='sublabel' title='hit points from class'>
-            <span class='sublabel darkred' >class</span>
-            <input class='3em' name='attr_hit_points_class' placeholder='0' spellcheck='false' title='@{hit_points_class}' type='text' value='' />
-        </label> -->
         <label class='sublabel' title='hit points permanent bonus from other sources like feats and class features'>
             <span class='sublabel darkred' >bonus</span>
             <input class='3em' name='attr_hit_points_other' placeholder='0' spellcheck='false' title='@{hit_points_other}' type='text' value='' />
@@ -50,6 +34,42 @@
             <textarea name='attr_hit_points_notes' placeholder='notes' spellcheck='false' title='@{hit_points_notes}' value=''></textarea>
         </label>
     </div>
+	<hr />
+	<div class='grid shield-grid display'>
+		<button class='pictos settings-button' name='act_toggle_shield' title='shield settings' type='action'>
+			y
+		</button>
+		<div class='circle'>
+			<label class='shield display'>
+				<span >abs</span>
+				<span name='attr_armor_class_shield' title='@{armor_class_shield}'></span>
+			</label>
+		</div>
+		<div class='shield-hp'>
+			<label class='sublabel' title='shield hp'>
+				<span class='sublabel darkred' >current</span>
+				<input name='attr_armor_class_shield_hp' placeholder='0' spellcheck='false' title='@{armor_class_shield_hp}' type='text' value='6' />
+			</label>
+		</div>
+		<label class='sublabel' title='shield hardness'>
+			<span class='sublabel darkred' >dr</span>
+			<span name='attr_armor_class_shield_hardness' title='@{armor_class_shield_hardness}'></span>
+		</label>
+		<div class='settings grid'>
+			<label title='shield bonus to ac'>
+				<span class='sublabel darkred' >absorption</span>
+				<input name='attr_armor_class_shield_ac_bonus' placeholder='0' spellcheck='false' title='@{armor_class_shield_ac_bonus}' type='text' value='0' />
+			</label>
+			<label title='shield hardness'>
+				<span class='sublabel darkred' >dr</span>
+				<input name='attr_armor_class_shield_hardness' placeholder='0' spellcheck='false' title='@{armor_class_shield_hardness}' type='text' value='0' />
+			</label>
+			<label title='shield notes'>
+				<span >notes</span>
+				<textarea name='attr_armor_class_shield_notes' placeholder='notes' spellcheck='false' title='@{armor_class_shield_notes}' value=''></textarea>
+			</label>
+		</div>
+	</div>
     <hr />
     <div class='resistance repeating'>
         <h3 >resistances and immunities</h3>

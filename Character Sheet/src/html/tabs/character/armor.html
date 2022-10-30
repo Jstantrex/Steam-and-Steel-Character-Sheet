@@ -24,7 +24,7 @@
         <span title="or">or</span>
         <div>
             <label class='sublabel' title='cap'>
-                <span class='sublabel darkred' >cap</span>
+                <span class='sublabel darkred' >max mod</span>
                 <span name='attr_armor_class_cap' title='@{armor_class_cap}'></span>
             </label>
         </div>
@@ -60,10 +60,10 @@
                    <input name='attr_armor_class_ability' placeholder='0' spellcheck='false' title='@{armor_class_ability}' type='text' value='' />
                 </label>
             </div>
-            <span >or</span>
+            <span title="or">or</span>
             <label title='armor class cap'>
-                <span class='sublabel darkred' >cap</span>
-                <input name='attr_armor_class_cap' placeholder='3' spellcheck='false' title='@{armor_class_cap}' type='text' value='' />
+                <span class='sublabel darkred' >max mod</span>
+                <input name='attr_armor_class_cap' placeholder='0' spellcheck='false' title='@{armor_class_cap}' type='text' value='' />
             </label>
         </div>
         <label class='sublabel' title='armor class item'>
@@ -81,62 +81,6 @@
         <label title='armor class notes'>
             <span >notes</span>
             <textarea name='attr_armor_class_notes' placeholder='notes' spellcheck='false' title='@{armor_class_notes}' value=''></textarea>
-        </label>
-    </div>
-</div>
-<hr />
-<!-- Shield row -->
-<div class='grid shield-grid'>
-    <button class='pictos settings-button' name='act_toggle_shield' title='shield settings' type='action'>
-        y
-    </button>
-    <div class='circle'>
-        <label class='shield display'>
-            <span >absorption</span>
-            <span name='attr_armor_class_shield' title='@{armor_class_shield}'></span>
-        </label>
-    </div>
-    <label class='sublabel' title='shield temporary'>
-        <span class='sublabel darkred' >temp</span>
-        <span name='attr_armor_class_shield_temporary' title='@{armor_class_shield_temporary}'></span>
-    </label>
-    <label class='sublabel' title='shield hardness'>
-        <span class='sublabel darkred' >dr</span>
-        <span name='attr_armor_class_shield_hardness' title='@{armor_class_shield_hardness}'></span>
-    </label>
-    <div class='shield-hp'>
-        <label class='sublabel' title='shield hp'>
-            <span class='sublabel darkred' >abp</span>
-            <input name='attr_armor_class_shield_hp' placeholder='0' spellcheck='false' title='@{armor_class_shield_hp}' type='text' value='6' />
-        </label>
-        <span>/</span>
-        <label class='sublabel' title='shield hp max'>
-            <span class='sublabel darkred' >max</span>
-            <span name='attr_armor_class_shield_max' title='@{armor_class_shield_max}'></span>
-        </label>
-    </div>
-    <div class='settings grid'>
-        <label title='shield bonus to ac'>
-            <span class='sublabel darkred' >absorption</span>
-            <input name='attr_armor_class_shield_ac_bonus' placeholder='0' spellcheck='false' title='@{armor_class_shield_ac_bonus}' type='text' value='0' />
-        </label>
-        <label title='shield temporary'>
-            <span class='sublabel darkred' >temp</span>
-            <input name='attr_armor_class_shield_temporary' placeholder='0' spellcheck='false' title='@{armor_class_shield_temporary}' type='text' value='0' />
-        </label>
-        <label title='shield hardness'>
-            <span class='sublabel darkred' >dr</span>
-            <input name='attr_armor_class_shield_hardness' placeholder='0' spellcheck='false' title='@{armor_class_shield_hardness}' type='text' value='3' />
-        </label>
-        <div class='shield-hp'>
-            <label title='shield hp max'>
-                <span class='sublabel darkred' >max</span>
-                <input name='attr_armor_class_shield_max' placeholder='0' spellcheck='false' title='@{armor_class_shield_max}' type='text' value='6' />
-            </label>
-        </div>
-        <label title='shield notes'>
-            <span >notes</span>
-            <textarea name='attr_armor_class_shield_notes' placeholder='notes' spellcheck='false' title='@{armor_class_shield_notes}' value=''></textarea>
         </label>
     </div>
 </div>

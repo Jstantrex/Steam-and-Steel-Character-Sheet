@@ -60,24 +60,8 @@
             <span class='sublabel darkred' >temporary</span>
             <input name='attr_hit_points_temporary' placeholder='0' spellcheck='false' title='@{hit_points_temporary}' type='text' value='' />
         </label>
-        <!-- <label title='hit points dying'>
-            <span class='sublabel darkred' >dying</span>
-            <input name='attr_hit_points_dying' placeholder='0' spellcheck='false' title='@{hit_points_dying}' type='text' value='' />
-        </label>
-        <label title='hit points wounded'>
-            <span class='sublabel darkred' >wounded</span>
-            <input name='attr_hit_points_wounded' placeholder='0' spellcheck='false' title='@{hit_points_wounded}' type='text' value='' />
-        </label> -->
     </div>
     <div class='grid settings'>
-        <!-- <label class='sublabel' title='hit points from ancestry'>
-            <span class='sublabel darkred' >ancestry</span>
-            <input name='attr_hit_points_ancestry' placeholder='0' spellcheck='false' title='@{hit_points_ancestry}' type='text' value='' />
-        </label>
-        <label class='sublabel' title='hit points from class'>
-            <span class='sublabel darkred' >class</span>
-            <input class='3em' name='attr_hit_points_class' placeholder='0' spellcheck='false' title='@{hit_points_class}' type='text' value='' />
-        </label> -->
         <label class='sublabel' title='hit points permanent bonus from other sources like feats and class features'>
             <span class='sublabel darkred' >bonus</span>
             <input class='3em' name='attr_hit_points_other' placeholder='0' spellcheck='false' title='@{hit_points_other}' type='text' value='' />
@@ -91,6 +75,42 @@
             <textarea name='attr_hit_points_notes' placeholder='notes' spellcheck='false' title='@{hit_points_notes}' value=''></textarea>
         </label>
     </div>
+	<hr />
+	<div class='grid shield-grid display'>
+		<button class='pictos settings-button' name='act_toggle_shield' title='shield settings' type='action'>
+			y
+		</button>
+		<div class='circle'>
+			<label class='shield display'>
+				<span >abs</span>
+				<span name='attr_armor_class_shield' title='@{armor_class_shield}'></span>
+			</label>
+		</div>
+		<div class='shield-hp'>
+			<label class='sublabel' title='shield hp'>
+				<span class='sublabel darkred' >current</span>
+				<input name='attr_armor_class_shield_hp' placeholder='0' spellcheck='false' title='@{armor_class_shield_hp}' type='text' value='6' />
+			</label>
+		</div>
+		<label class='sublabel' title='shield hardness'>
+			<span class='sublabel darkred' >dr</span>
+			<span name='attr_armor_class_shield_hardness' title='@{armor_class_shield_hardness}'></span>
+		</label>
+		<div class='settings grid'>
+			<label title='shield bonus to ac'>
+				<span class='sublabel darkred' >absorption</span>
+				<input name='attr_armor_class_shield_ac_bonus' placeholder='0' spellcheck='false' title='@{armor_class_shield_ac_bonus}' type='text' value='0' />
+			</label>
+			<label title='shield hardness'>
+				<span class='sublabel darkred' >dr</span>
+				<input name='attr_armor_class_shield_hardness' placeholder='0' spellcheck='false' title='@{armor_class_shield_hardness}' type='text' value='0' />
+			</label>
+			<label title='shield notes'>
+				<span >notes</span>
+				<textarea name='attr_armor_class_shield_notes' placeholder='notes' spellcheck='false' title='@{armor_class_shield_notes}' value=''></textarea>
+			</label>
+		</div>
+	</div>
     <hr />
     <div class='resistance repeating'>
         <h3 >resistances and immunities</h3>
@@ -184,6 +204,18 @@
             <span class='sublabel darkred' >score temp</span>
             <input name='attr_strength_score_temporary' placeholder='0' spellcheck='false' title='@{strength_score_temporary}' type='text' value='0' />
         </label>
+		<label class="sublabel" title="strength tenacity">
+			<span class='sublabel darkred' >tenacity</span>
+            <input name='attr_strength_tenacity' placeholder='0' spellcheck='false' title='@{strength_tenacity}' type='text' value='0' />
+		</label>
+		<label class="sublabel" title="strength max tenacity">
+			<span class='sublabel darkred' >max tenacity</span>
+            <span name='attr_strength_max_tenacity' title='@{strength_max_tenacity}'></span>
+		</label>
+		<label class="sublabel" title="strength tenacity mod">
+			<span class='sublabel darkred' >tenacity mod</span>
+            <input name='attr_strength_tenacity_mod' placeholder='0' spellcheck='false' title='@{strength_tenacity_mod}' type='text' value='0' />
+		</label>
         <label class='notes' title='strenght notes'>
             <span >notes</span>
             <textarea class='notes' name='attr_strength_notes' placeholder='notes' spellcheck='false' title='@{strength_notes}' value=''></textarea>
@@ -221,6 +253,18 @@
             <span class='sublabel darkred' >score temp</span>
             <input name='attr_dexterity_score_temporary' placeholder='0' spellcheck='false' title='@{dexterity_score_temporary}' type='text' value='0' />
         </label>
+		<label class="sublabel" title="dexterity tenacity">
+			<span class='sublabel darkred' >tenacity</span>
+            <input name='attr_dexterity_tenacity' placeholder='0' spellcheck='false' title='@{dexterity_tenacity}' type='text' value='0' />
+		</label>
+		<label class="sublabel" title="dexterity max tenacity">
+			<span class='sublabel darkred' >max tenacity</span>
+            <span name='attr_dexterity_max_tenacity' title='@{dexterity_max_tenacity}'></span>
+		</label>
+		<label class="sublabel" title="dexterity tenacity mod">
+			<span class='sublabel darkred' >tenacity mod</span>
+            <input name='attr_dexterity_tenacity_mod' placeholder='0' spellcheck='false' title='@{dexterity_tenacity_mod}' type='text' value='0' />
+		</label>
         <label class='notes' title='dexterity notes'>
             <span >notes</span>
             <textarea name='attr_dexterity_notes' placeholder='notes' spellcheck='false' title='@{dexterity_notes}' value=''></textarea>
@@ -258,6 +302,22 @@
             <span class='sublabel darkred' >score temp</span>
             <input name='attr_constitution_score_temporary' placeholder='0' spellcheck='false' title='@{constitution_score_temporary}' type='text' value='0' />
         </label>
+		<label class="sublabel" title="constitution tenacity">
+			<span class='sublabel darkred' >tenacity</span>
+            <input name='attr_constitution_tenacity' placeholder='0' spellcheck='false' title='@{constitution_tenacity}' type='text' value='0' />
+		</label>
+		<label class="sublabel" title="constitution max tenacity">
+			<span class='sublabel darkred' >max tenacity</span>
+            <span name='attr_constitution_max_tenacity' title='@{constitution_max_tenacity}'></span>
+		</label>
+		<label class="sublabel" title="constitution tenacity mod">
+			<span class='sublabel darkred' >tenacity mod</span>
+            <input name='attr_constitution_tenacity_mod' placeholder='0' spellcheck='false' title='@{constitution_tenacity_mod}' type='text' value='0' />
+		</label>
+		<label class="sublabel" title="tenacity drain">
+			<span class='sublabel darkred' >tenacity drain</span>
+            <span name='attr_constitution_tenacity_drain' title='@{constitution_tenacity_drain}'></span>
+		</label>
         <label class='notes' title='constitution notes'>
             <span >notes</span>
             <textarea name='attr_constitution_notes' placeholder='notes' spellcheck='false' title='@{constitution_notes}' value=''></textarea>
@@ -295,6 +355,18 @@
             <span class='sublabel darkred' >score temp</span>
             <input name='attr_intelligence_score_temporary' placeholder='0' spellcheck='false' title='@{intelligence_score_temporary}' type='text' value='0' />
         </label>
+		<label class="sublabel" title="intelligence tenacity">
+			<span class='sublabel darkred' >tenacity</span>
+            <input name='attr_intelligence_tenacity' placeholder='0' spellcheck='false' title='@{intelligence_tenacity}' type='text' value='0' />
+		</label>
+		<label class="sublabel" title="intelligence max tenacity">
+			<span class='sublabel darkred' >max tenacity</span>
+            <span name='attr_intelligence_max_tenacity' title='@{intelligence_max_tenacity}'></span>
+		</label>
+		<label class="sublabel" title="intelligence tenacity mod">
+			<span class='sublabel darkred' >tenacity mod</span>
+            <input name='attr_intelligence_tenacity_mod' placeholder='0' spellcheck='false' title='@{intelligence_tenacity_mod}' type='text' value='0' />
+		</label>
         <label class='notes' title='intelligence notes'>
             <span >notes</span>
             <textarea name='attr_intelligence_notes' placeholder='notes' spellcheck='false' title='@{intelligence_notes}' value=''></textarea>
@@ -332,6 +404,18 @@
             <span class='sublabel darkred' >score temp</span>
             <input name='attr_wisdom_score_temporary' placeholder='0' spellcheck='false' title='@{wisdom_score_temporary}' type='text' value='0' />
         </label>
+		<label class="sublabel" title="wisdom tenacity">
+			<span class='sublabel darkred' >tenacity</span>
+            <input name='attr_wisdom_tenacity' placeholder='0' spellcheck='false' title='@{wisdom_tenacity}' type='text' value='0' />
+		</label>
+		<label class="sublabel" title="wisdom max tenacity">
+			<span class='sublabel darkred' >max tenacity</span>
+            <span name='attr_wisdom_max_tenacity' title='@{wisdom_max_tenacity}'></span>
+		</label>
+		<label class="sublabel" title="wisdom tenacity mod">
+			<span class='sublabel darkred' >tenacity mod</span>
+            <input name='attr_wisdom_tenacity_mod' placeholder='0' spellcheck='false' title='@{wisdom_tenacity_mod}' type='text' value='0' />
+		</label>
         <label class='notes' title='wisdom notes'>
             <span >notes</span>
             <textarea name='attr_wisdom_notes' placeholder='notes' spellcheck='false' title='@{wisdom_notes}' value=''></textarea>
@@ -876,7 +960,7 @@
         <span title="or">or</span>
         <div>
             <label class='sublabel' title='cap'>
-                <span class='sublabel darkred' >cap</span>
+                <span class='sublabel darkred' >max mod</span>
                 <span name='attr_armor_class_cap' title='@{armor_class_cap}'></span>
             </label>
         </div>
@@ -912,10 +996,10 @@
                    <input name='attr_armor_class_ability' placeholder='0' spellcheck='false' title='@{armor_class_ability}' type='text' value='' />
                 </label>
             </div>
-            <span >or</span>
+            <span title="or">or</span>
             <label title='armor class cap'>
-                <span class='sublabel darkred' >cap</span>
-                <input name='attr_armor_class_cap' placeholder='3' spellcheck='false' title='@{armor_class_cap}' type='text' value='' />
+                <span class='sublabel darkred' >max mod</span>
+                <input name='attr_armor_class_cap' placeholder='0' spellcheck='false' title='@{armor_class_cap}' type='text' value='' />
             </label>
         </div>
         <label class='sublabel' title='armor class item'>
@@ -933,62 +1017,6 @@
         <label title='armor class notes'>
             <span >notes</span>
             <textarea name='attr_armor_class_notes' placeholder='notes' spellcheck='false' title='@{armor_class_notes}' value=''></textarea>
-        </label>
-    </div>
-</div>
-<hr />
-<!-- Shield row -->
-<div class='grid shield-grid'>
-    <button class='pictos settings-button' name='act_toggle_shield' title='shield settings' type='action'>
-        y
-    </button>
-    <div class='circle'>
-        <label class='shield display'>
-            <span >absorption</span>
-            <span name='attr_armor_class_shield' title='@{armor_class_shield}'></span>
-        </label>
-    </div>
-    <label class='sublabel' title='shield temporary'>
-        <span class='sublabel darkred' >temp</span>
-        <span name='attr_armor_class_shield_temporary' title='@{armor_class_shield_temporary}'></span>
-    </label>
-    <label class='sublabel' title='shield hardness'>
-        <span class='sublabel darkred' >dr</span>
-        <span name='attr_armor_class_shield_hardness' title='@{armor_class_shield_hardness}'></span>
-    </label>
-    <div class='shield-hp'>
-        <label class='sublabel' title='shield hp'>
-            <span class='sublabel darkred' >abp</span>
-            <input name='attr_armor_class_shield_hp' placeholder='0' spellcheck='false' title='@{armor_class_shield_hp}' type='text' value='6' />
-        </label>
-        <span>/</span>
-        <label class='sublabel' title='shield hp max'>
-            <span class='sublabel darkred' >max</span>
-            <span name='attr_armor_class_shield_max' title='@{armor_class_shield_max}'></span>
-        </label>
-    </div>
-    <div class='settings grid'>
-        <label title='shield bonus to ac'>
-            <span class='sublabel darkred' >absorption</span>
-            <input name='attr_armor_class_shield_ac_bonus' placeholder='0' spellcheck='false' title='@{armor_class_shield_ac_bonus}' type='text' value='0' />
-        </label>
-        <label title='shield temporary'>
-            <span class='sublabel darkred' >temp</span>
-            <input name='attr_armor_class_shield_temporary' placeholder='0' spellcheck='false' title='@{armor_class_shield_temporary}' type='text' value='0' />
-        </label>
-        <label title='shield hardness'>
-            <span class='sublabel darkred' >dr</span>
-            <input name='attr_armor_class_shield_hardness' placeholder='0' spellcheck='false' title='@{armor_class_shield_hardness}' type='text' value='3' />
-        </label>
-        <div class='shield-hp'>
-            <label title='shield hp max'>
-                <span class='sublabel darkred' >max</span>
-                <input name='attr_armor_class_shield_max' placeholder='0' spellcheck='false' title='@{armor_class_shield_max}' type='text' value='6' />
-            </label>
-        </div>
-        <label title='shield notes'>
-            <span >notes</span>
-            <textarea name='attr_armor_class_shield_notes' placeholder='notes' spellcheck='false' title='@{armor_class_shield_notes}' value=''></textarea>
         </label>
     </div>
 </div></div><div class="savingthrows background-color"><!-- Saving Throws -->
@@ -1275,7 +1303,7 @@
         </div>
 
         <div class="feats-general-grid background-color">
-            <h1 >general feats</h1>
+            <h1>feats</h1>
             <fieldset class="repeating_feat-general">
                 <input class="toggles" name="attr_toggles" type="hidden" value="display,settings," />
                 <div class="grid repeating-grid-display feat-border">
@@ -2664,9 +2692,10 @@ var modPf2 = (function () {
     // === ABILITIES
     const updateAbility = function(attr) {
         console.log(`%c Update ability ${attr}`, "color:purple;font-size:14px;");
-        let fields = [`${attr}_score`,`${attr}_score_temporary`,`${attr}_modifier_temporary`];
+        let fields = [`${attr}_score`,`${attr}_score_temporary`,`${attr}_modifier_temporary`, `constitution_tenacity_drain`];
         getAttrs(fields, (values) => {
             setAttrs(calcAbility(attr,values), {silent: true}, () => {
+				updateTenacity(attr);
                 totalUpdate();
             });
         });
@@ -2675,6 +2704,12 @@ var modPf2 = (function () {
         let update = {}, mod = 0;
         update[`${attr}`] = (parseInt(values[`${attr}_score`]) || 0) + (parseInt(values[`${attr}_score_temporary`]) || 0);
         mod = (Math.floor((parseInt(update[`${attr}`], 10) - 10) / 2) || 0) + (parseInt(values[`${attr}_modifier_temporary`]) || 0);
+
+		if (attr === "constitution") {
+			console.log(values[`constitution_tenacity_drain`])
+			update[`${attr}`] -= values[`constitution_tenacity_drain`];
+		}
+
         update[`${attr}_modifier`] = mod;
         if(attr === "strength") {
             if(mod < 0) {
@@ -2685,6 +2720,69 @@ var modPf2 = (function () {
         }
         return update;
     };
+
+	const updateTenacity = function(attr) {
+        console.log(`%c Update tenacity ${attr}`, "color:purple;font-size:14px;");
+		var abilities = getAttrNames(['abilities']);
+		let fields = [];
+		abilities.forEach(ability => {fields = fields.concat([`${ability}_score`,`${ability}_score_temporary`,`${ability}_modifier_temporary`,`${ability}_modifier`, `${ability}_tenacity_mod`])})
+        getAttrs(fields, (values) => {
+            setAttrs(calcTenacity(attr,values), {silent: true}, () => {
+				updateTenacityDrain();
+			});
+        });
+	}
+
+	const calcTenacity = function (attr, values) {
+		let update = {};
+		if (attr !== "charisma") {
+			var baseMod = ((Math.floor((parseInt(values[`${attr}_score`], 10) - 10) / 2) || 0) || 0);
+			update[`${attr}_max_tenacity`] = baseMod + values[`charisma_modifier`] + parseInt(values[`${attr}_tenacity_mod`]);
+		}
+		else {
+			var abilities = getAttrNames(['abilities']);
+			
+			abilities.forEach(ability => {
+				var baseMod = ((Math.floor((parseInt(values[`${ability}_score`], 10) - 10) / 2) || 0) || 0);
+				update[`${ability}_max_tenacity`] = baseMod + values[`charisma_modifier`] + parseInt(values[`${ability}_tenacity_mod`]);
+			})
+		}
+
+        return update;
+	}
+
+	const updateTenacityDrain = function() {
+		var abilities = getAttrNames(['abilities']);
+		let fields = [];
+		abilities.forEach(ability => {fields = fields.concat([`${ability}`, `${ability}_score`,`${ability}_score_temporary`,`${ability}_modifier_temporary`,`${ability}_modifier`, `${ability}_tenacity_mod`, `${ability}_max_tenacity`, `${ability}_tenacity`])})
+
+		getAttrs(fields, (values) => {
+            setAttrs(calcTenacityDrain(values), {silent: true}, () => {
+				updateHitPoints();
+			});
+        });
+	}
+
+	const calcTenacityDrain = function (values) {
+        console.log(`%c Update tenacity drain`, "color:purple;font-size:14px;");
+		let update = {}
+		var drain = 0;
+		var abilities = getAttrNames(['abilities']);
+
+		abilities.forEach(ability => {
+			var excess = parseInt(values[`${ability}_tenacity`]) - values[`${ability}_max_tenacity`];
+			if (excess > 0) {
+				drain += excess;
+			}
+		})
+
+		update[`constitution_tenacity_drain`] = drain;
+
+		update[`constitution`] = (parseInt(values[`constitution_score`]) || 0) + (parseInt(values[`constitution_score_temporary`]) || 0) - drain;
+        mod = (Math.floor((parseInt(update['constitution'], 10) - 10) / 2) || 0) + (parseInt(values[`constitution_modifier_temporary`]) || 0);
+
+		return update;
+	}
 
     // === SKILLS
     const updateSkill = function(id, attr, callback) {
@@ -3874,6 +3972,8 @@ var modPf2 = (function () {
         , getAttrNames: getAttrNames
         , totalUpdate: totalUpdate
         , updateAbility: updateAbility
+		, updateTenacity: updateTenacity
+		, updateTenacityDrain: updateTenacityDrain
         , updateSkill: updateSkill
         , updateSave: updateSave
         , updateArmorClass: updateArmorClass
@@ -4008,9 +4108,15 @@ on("change:level", (eventinfo) => {
 //Modifier calculators
 modPf2.getAttrNames(['abilities']).forEach(attr => {
     on(`change:${attr}_score change:${attr}_score_temporary change:${attr}_modifier_temporary`, (eventinfo) => {
-        // console.table(eventinfo);
+        //console.table(eventinfo);
         modPf2.updateAbility(attr);
     });
+	on(`change:${attr}_tenacity_mod`, (eventinfo) => {
+		modPf2.updateTenacity(attr);
+	})
+	on(`change:${attr}_tenacity`, (eventinfo) => {
+		modPf2.updateTenacityDrain();
+	})
 });
 //Update ability inputs with the appropriate selectable modifier
 modPf2.getAttrNames(['select_attributes']).forEach(attr => {

@@ -789,9 +789,10 @@ var modPf2 = (function () {
     // === ABILITIES
     const updateAbility = function(attr) {
         console.log(`%c Update ability ${attr}`, "color:purple;font-size:14px;");
-        let fields = [`${attr}_score`,`${attr}_score_temporary`,`${attr}_modifier_temporary`];
+        let fields = [`${attr}_score`,`${attr}_score_temporary`,`${attr}_modifier_temporary`, `constitution_tenacity_drain`];
         getAttrs(fields, (values) => {
             setAttrs(calcAbility(attr,values), {silent: true}, () => {
+				updateTenacity(attr);
                 totalUpdate();
             });
         });
@@ -800,6 +801,12 @@ var modPf2 = (function () {
         let update = {}, mod = 0;
         update[`${attr}`] = (parseInt(values[`${attr}_score`]) || 0) + (parseInt(values[`${attr}_score_temporary`]) || 0);
         mod = (Math.floor((parseInt(update[`${attr}`], 10) - 10) / 2) || 0) + (parseInt(values[`${attr}_modifier_temporary`]) || 0);
+
+		if (attr === "constitution") {
+			console.log(values[`constitution_tenacity_drain`])
+			update[`${attr}`] -= values[`constitution_tenacity_drain`];
+		}
+
         update[`${attr}_modifier`] = mod;
         if(attr === "strength") {
             if(mod < 0) {
@@ -810,6 +817,69 @@ var modPf2 = (function () {
         }
         return update;
     };
+
+	const updateTenacity = function(attr) {
+        console.log(`%c Update tenacity ${attr}`, "color:purple;font-size:14px;");
+		var abilities = getAttrNames(['abilities']);
+		let fields = [];
+		abilities.forEach(ability => {fields = fields.concat([`${ability}_score`,`${ability}_score_temporary`,`${ability}_modifier_temporary`,`${ability}_modifier`, `${ability}_tenacity_mod`])})
+        getAttrs(fields, (values) => {
+            setAttrs(calcTenacity(attr,values), {silent: true}, () => {
+				updateTenacityDrain();
+			});
+        });
+	}
+
+	const calcTenacity = function (attr, values) {
+		let update = {};
+		if (attr !== "charisma") {
+			var baseMod = ((Math.floor((parseInt(values[`${attr}_score`], 10) - 10) / 2) || 0) || 0);
+			update[`${attr}_max_tenacity`] = baseMod + values[`charisma_modifier`] + parseInt(values[`${attr}_tenacity_mod`]);
+		}
+		else {
+			var abilities = getAttrNames(['abilities']);
+			
+			abilities.forEach(ability => {
+				var baseMod = ((Math.floor((parseInt(values[`${ability}_score`], 10) - 10) / 2) || 0) || 0);
+				update[`${ability}_max_tenacity`] = baseMod + values[`charisma_modifier`] + parseInt(values[`${ability}_tenacity_mod`]);
+			})
+		}
+
+        return update;
+	}
+
+	const updateTenacityDrain = function() {
+		var abilities = getAttrNames(['abilities']);
+		let fields = [];
+		abilities.forEach(ability => {fields = fields.concat([`${ability}`, `${ability}_score`,`${ability}_score_temporary`,`${ability}_modifier_temporary`,`${ability}_modifier`, `${ability}_tenacity_mod`, `${ability}_max_tenacity`, `${ability}_tenacity`])})
+
+		getAttrs(fields, (values) => {
+            setAttrs(calcTenacityDrain(values), {silent: true}, () => {
+				updateHitPoints();
+			});
+        });
+	}
+
+	const calcTenacityDrain = function (values) {
+        console.log(`%c Update tenacity drain`, "color:purple;font-size:14px;");
+		let update = {}
+		var drain = 0;
+		var abilities = getAttrNames(['abilities']);
+
+		abilities.forEach(ability => {
+			var excess = parseInt(values[`${ability}_tenacity`]) - values[`${ability}_max_tenacity`];
+			if (excess > 0) {
+				drain += excess;
+			}
+		})
+
+		update[`constitution_tenacity_drain`] = drain;
+
+		update[`constitution`] = (parseInt(values[`constitution_score`]) || 0) + (parseInt(values[`constitution_score_temporary`]) || 0) - drain;
+        mod = (Math.floor((parseInt(update['constitution'], 10) - 10) / 2) || 0) + (parseInt(values[`constitution_modifier_temporary`]) || 0);
+
+		return update;
+	}
 
     // === SKILLS
     const updateSkill = function(id, attr, callback) {
@@ -1999,6 +2069,8 @@ var modPf2 = (function () {
         , getAttrNames: getAttrNames
         , totalUpdate: totalUpdate
         , updateAbility: updateAbility
+		, updateTenacity: updateTenacity
+		, updateTenacityDrain: updateTenacityDrain
         , updateSkill: updateSkill
         , updateSave: updateSave
         , updateArmorClass: updateArmorClass
