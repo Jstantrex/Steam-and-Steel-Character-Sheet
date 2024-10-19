@@ -10,17 +10,17 @@ var modPf2 = (function () {
         , "ability_modifiers": ["strength_modifier", "strength_modifier_half", "dexterity_modifier", "constitution_modifier", "intelligence_modifier", "wisdom_modifier", "charisma_modifier"]
         , "setting_toggles": ["class_dc", "armor_class", "hitpoints", "saving_throws", "shield", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "perception", "ancestry", "notes", "spell_attack", "spell_dc", "npcsettings", "npcspellcaster"]
         , "repeating_toggles": ["repeating_conditions", "repeating_resistances-immunities", "repeating_senses", "repeating_languages", "repeating_melee-strikes", "repeating_ranged-strikes","repeating_actions","repeating_actions-activities","repeating_free-actions-reactions","repeating_feat-ancestry","repeating_feat-class","repeating_feat-general","repeating_feat-bonus", "repeating_feat-skill", "repeating_lore", "repeating_items-worn", "repeating_items-readied", "repeating_items-other", "repeating_npc-items", "repeating_npc-melee-strikes", "repeating_npc-ranged-strikes","repeating_spellinnate","repeating_spellfocus","repeating_cantrip","repeating_normalspells", "repeating_interaction-abilities"]
-        , "select_attributes": ["armor_class","saving_throws_fortitude","saving_throws_reflex","saving_throws_will","class_dc_key","perception","repeating_melee-strikes:weapon", "repeating_melee-strikes:damage","repeating_ranged-strikes:weapon","repeating_ranged-strikes:damage","acrobatics", "alchemy", "athletics", "awareness", "charm", "craft", "deception", "husbandry", "insight", "intimidation", "investigation", "lore", "medicine","navigation", "operate", "performance", "religion", "repair", "stealth", "survival", "tech", "thievery", "withstand","spell_attack_key","spell_dc_key"]
+        , "select_attributes": ["armor_class","saving_throws_strengthsave","saving_throws_fortitude","saving_throws_reflex","saving_throws_will","class_dc_key","perception","repeating_melee-strikes:weapon", "repeating_melee-strikes:damage","repeating_ranged-strikes:weapon","repeating_ranged-strikes:damage","acrobatics", "alchemy", "athletics", "awareness", "charm", "craft", "deception", "husbandry", "insight", "intimidation", "investigation", "lore", "medicine","navigation", "operate", "performance", "religion", "repair", "stealth", "survival", "tech", "thievery", "withstand","spell_attack_key","spell_dc_key"]
         , "skills": ["acrobatics", "alchemy", "athletics", "awareness", "charm", "craft", "deception", "husbandry", "insight", "intimidation", "investigation", "lore", "medicine", "navigation", "operate", "performance", "religion", "repair", "stealth", "survival", "tech", "thievery", "withstand"]
         , "skills_fields": ["ability","ability_select","rank","proficiency","item","armor","temporary","name"]
         , "repeating_skills": ["lore"]
-        , "saves": ["saving_throws_fortitude","saving_throws_reflex","saving_throws_will"]
+        , "saves": ["saving_throws_strengthsave","saving_throws_fortitude","saving_throws_reflex","saving_throws_will"]
         , "saves_fields": ["ability","ability_select","rank","proficiency","item","temporary"]
         , "ac": ["armor_class"]
         , "ac_fields": ["ability","ability_select","dc_rank","proficiency","item","temporary","dc_base","cap","shield_ac_bonus","shield_temporary"]
         , "hit_points": ["hit_points_ancestry","hit_points_class","hit_points_other","hit_points_item","constitution"]
         , "repeating_attacks": ["melee-strikes","ranged-strikes"]
-        , "attacks_fields": ["weapon","weapon_ability_select","weapon_ability","weapon_proficiency","weapon_rank","weapon_item","weapon_temporary","weapon_traits","damage_dice","damage_dice_size","damage_ability_select","damage_ability","damage_b","damage_p","damage_s","damage_weapon_specialization","damage_temporary","damage_other","damage_effects","damage_additional"]
+        , "attacks_fields": ["weapon","weapon_ability_select","weapon_ability","weapon_proficiency","weapon_rank","weapon_item","weapon_temporary","weapon_traits","damage_dice","damage_dice_size","damage_ability_select","damage_ability","damage_b","damage_p","damage_s","damage_other","damage_effects","damage_additional"]
         , "perception": ["perception_ability_select","perception_ability","perception_rank","perception_proficiency","perception_item","perception_temporary"]
         , "class_dc": ["class_dc_key_ability_select","class_dc_key_ability","class_dc_proficiency","class_dc_rank","class_dc_item","class_dc_temporary"]
         , "spell_attack": ["spell_attack_key_ability_select","spell_attack_key_ability", "spell_attack_rank","spell_attack_proficiency","spell_attack_temporary"]
@@ -39,7 +39,7 @@ var modPf2 = (function () {
     };
     // NPC attributes object for building NPC from Compendium
     const global_npc_attributes = {
-        basics: ["npc_type","level","alignment","size","traits","perception","senses","languages","acrobatics","acrobatics_notes","alchemy","alchemy_notes","athletics","athletics_notes","awaremess","awareness_notes","charm","charm_notes","craft","craft_notes","deception","deception_notes","husbandry","husbandry_notes","insight","insight_notes","intimidation","intimidation_notes","investigation","investigation_notes","lore","lore_notes","medicine","medicine_notes","navigation","navigation_notes","operate","operate_notes","performance","performance_notes","religion","religion_notes","repair","repair_notes","stealth","stealth_notes","survival","survival_notes","tech","tech_notes","thievery","thievery_notes","withstand","withstand_notes","strength_modifier","dexterity_modifier","constitution_modifier","intelligence_modifier","wisdom_modifier","charisma_modifier","armor_class","armor_class_notes","saving_throws_fortitude","saving_throws_reflex","saving_throws_will","saving_throws_notes","hit_points_max","hit_points_notes","immunities","weaknesses","resistances","speed","speed_notes","spell_attack","spell_dc","focus_points_max"]
+        basics: ["npc_type","level","alignment","size","traits","perception","senses","languages","acrobatics","acrobatics_notes","alchemy","alchemy_notes","athletics","athletics_notes","awaremess","awareness_notes","charm","charm_notes","craft","craft_notes","deception","deception_notes","husbandry","husbandry_notes","insight","insight_notes","intimidation","intimidation_notes","investigation","investigation_notes","lore","lore_notes","medicine","medicine_notes","navigation","navigation_notes","operate","operate_notes","performance","performance_notes","religion","religion_notes","repair","repair_notes","stealth","stealth_notes","survival","survival_notes","tech","tech_notes","thievery","thievery_notes","withstand","withstand_notes","strength_modifier","dexterity_modifier","constitution_modifier","intelligence_modifier","wisdom_modifier","charisma_modifier","armor_class","armor_class_notes","saving_throws_strengthsave","saving_throws_fortitude","saving_throws_reflex","saving_throws_will","saving_throws_notes","hit_points_max","hit_points_notes","immunities","weaknesses","resistances","speed","speed_notes","spell_attack","spell_dc","focus_points_max"]
     };
     // Misc
     const global_magic_traditions = ["arcane","divine","primal","occult"];
@@ -1066,26 +1066,15 @@ var modPf2 = (function () {
             }
             let damage_dice = `${update[`${id}_damage_dice`]}${update[`${id}_damage_dice_size`]}`;
             let damage_bonus = damage_ability
-                + (parseInt(values[`${id}_damage_weapon_specialization`]) || 0)
-                + (parseInt(values[`${id}_damage_temporary`]) || 0)
                 + (parseInt(values[`${id}_damage_other`]) || 0);
             // Attack display
             update[`${id}_weapon_display`] = `${update[`${id}_weapon_proficiency_display`] || ""} ${weapon_strike < 0 ? "" : "+"}${weapon_strike}${(values[`${id}_weapon_traits`] || "").length ? " ("+values[`${id}_weapon_traits`]+")" : ""}`.trim();
             // Damage display
-            update[`${id}_damage_display`] = `${damage_dice == "0D0" ? "" : damage_dice}${damage_bonus < 0 ? "" : "+"}${damage_bonus}${values[`${id}_damage_b`] == "1" ? " "+getTranslationByKey("b").toUpperCase() : ""}${values[`${id}_damage_p`] == "1" ? " "+getTranslationByKey("p").toUpperCase() : ""}${values[`${id}_damage_s`] == "1" ? " "+getTranslationByKey("s").toUpperCase() : ""}${(values[`${id}_damage_effects`] || "").length ?  " "+getTranslationByKey("plus")+" "+values[`${id}_damage_effects`] : ""}${(values[`${id}_damage_additional`] || "").length ?  " "+getTranslationByKey("plus")+" "+values[`${id}_damage_additional`] : ""}`;
+            update[`${id}_damage_display`] = `${damage_dice == "0D0" ? "" : damage_dice}${damage_bonus < 0 ? "" : "+"}${damage_bonus}${(values[`${id}_damage_effects`] || "").length ?  " + "+values[`${id}_damage_effects`] : ""}${(values[`${id}_damage_additional`] || "").length ?  " + "+values[`${id}_damage_additional`] : ""}`;
             // Damage Roll: calculating info to include translated damage type
             let damage_info = "";
-            if(values[`${id}_damage_b`] == "1") {
-                damage_info += ` ${getTranslationByKey("bludgeoning")}`;
-            }
-            if(values[`${id}_damage_p`] == "1") {
-                damage_info += ` ${getTranslationByKey("piercing")}`;
-            }
-            if(values[`${id}_damage_s`] == "1") {
-                damage_info += ` ${getTranslationByKey("slashing")}`;
-            }
             if((values[`${id}_damage_effects`] || "").length) {
-                damage_info += ` ${getTranslationByKey("plus")} @{damage_effects}`;
+                damage_info += ` + @{damage_effects}`;
             }
             update[`${id}_damage_info`] = damage_info.trim();
             // Damage roll : query damage dice # or not
@@ -1095,9 +1084,10 @@ var modPf2 = (function () {
                 update[`${id}_damage_dice_query`] = values[`query_roll_damage_dice`];
             }
             // Forced update to attack and damage rolls (in case of logic change)
-            update[`${id}_weapon_roll`] = "{{roll01_name=^{attack}}} {{roll01=[[1d20cs20cf1 + [@{weapon_proficiency_display}] @{weapon_strike}[@{text_modifier}] + (@{query_roll_bonus})[@{text_bonus}]]]}} {{roll01_type=attack}} {{roll01_info=@{weapon_traits}}} {{roll01_critical=1}}";
-            update[`${id}_damage_roll`] = `{{roll02_name=^{damage}}} {{roll02=[[@{damage_dice_query}@{damage_dice_size} + @{damage_ability}[@{text_ability_modifier}] + @{damage_weapon_specialization}[${(getTranslationByKey("weapon specialization") || "").toUpperCase()}] + @{damage_temporary}[${(getTranslationByKey("temp") || "").toUpperCase()}] + @{damage_other}[${(getTranslationByKey("other") || "").toUpperCase()}] + @{query_roll_damage_bonus}[@{text_roll_damage_bonus}]]]}} {{roll02_type=damage}} {{roll02_info=@{damage_info}}}`;
-            update[`${id}_damage_critical_roll`] = `{{roll03_name=^{critical_damage}}} {{roll03=[[(@{damage_dice_query}@{damage_dice_size} + @{damage_ability}[@{text_ability_modifier}] + @{damage_weapon_specialization}[${(getTranslationByKey("weapon specialization") || "").toUpperCase()}] + @{damage_temporary}[${(getTranslationByKey("temp") || "").toUpperCase()}] + @{damage_other}[${(getTranslationByKey("other") || "").toUpperCase()}] + @{query_roll_damage_bonus}[@{text_roll_damage_bonus}])*2]]}} {{roll03_type=critical-damage}} {{roll03_info=@{damage_info}}}`;
+            update[`${id}_weapon_roll`] = "{{roll01_name=^{attack}}} {{roll01=[[1d20cs>@{weapon_crit_range}cf1 + [@{weapon_proficiency_display}] @{weapon_strike}[@{text_modifier}] + (@{query_roll_bonus})[@{text_bonus}]]]}} {{roll01_type=attack}} {{roll01_info=@{weapon_traits}}} {{roll01_critical=1}}";
+            update[`${id}_critical_confirm`] = "{{criticalconfirm_name=^{critical_confirm}}} {{criticalconfirm=[[1d20cf1 + [@{weapon_proficiency_display}] @{weapon_strike}[@{text_modifier}] + (@{query_roll_bonus})[@{text_bonus}]]]}} {{criticalconfirm_type=critical-damage}} {{criticalconfirm_info=@{weapon_traits}}}";
+			update[`${id}_damage_roll`] = `{{roll02_name=^{damage}}} {{roll02=[[@{damage_dice_query}@{damage_dice_size} + @{damage_ability}[@{text_ability_modifier}] + @{damage_other}[${(getTranslationByKey("other") || "").toUpperCase()}] + @{query_roll_damage_bonus}[@{text_roll_damage_bonus}]]]}} {{roll02_type=damage}} {{roll02_info=@{damage_info}}}`;
+            update[`${id}_damage_critical_roll`] = `{{criticalroll_name=^{critical_damage}}} {{criticalroll=[[(@{damage_dice_query}*@{weapon_crit_mult})@{damage_dice_size} + @{damage_ability}[@{text_ability_modifier}] + @{damage_other}[${(getTranslationByKey("other") || "").toUpperCase()}] + @{query_roll_damage_bonus}[@{text_roll_damage_bonus}]]]}} {{criticalroll_type=critical-damage}} {{criticalroll_info=@{damage_info}}}`;
             // Critical damage roll option handling
             switch (critoption) {
                 case "none":

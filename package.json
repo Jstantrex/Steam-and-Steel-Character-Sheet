@@ -4,7 +4,10 @@
   "description": "Steam and Steel Character Sheet",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-html": "pug \"Character Sheet/SteamAndSteel.pug\"",
+    "build-css": "node-sass \"Character Sheet/SteamAndSteel.scss\" > \"Character Sheet/SteamAndSteel.css\"",
+	"build-all": "npm run build-html & npm run build-css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/Jstantrex/Steam-and-Steel-Character-Sheet#readme",
   "dependencies": {
+    "node-sass": "^8.0.0",
     "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6"
   }

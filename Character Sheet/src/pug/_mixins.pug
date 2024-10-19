@@ -57,8 +57,8 @@ mixin repeating_spell_section(section_name)
             button.sheet-pictos.sheet-settings-button(name="act_settings" type="action") y
             //- Optional Critical Damage handling
             input(name="attr_roll_critical_damage" type="hidden" value="@{damage_critical_roll}")
-            input(name="attr_damage_critical_roll"  type="hidden" value=" {{roll03_name=^{critical_damage}}} {{roll03=[[(@{damage_dice} + (@{damage_ability})[ABI] + (@{damage_misc})[MISC] + (@{query_roll_damage_bonus})[@{text_roll_damage_bonus}])*2]]}} {{roll03_type=critical-damage}} {{roll03_info=@{damage_type}}}")
-            input(name="attr_roll_critical_damage_button" type="hidden" value="{{roll03misc=[^{roll} ^{critical_damage}](~repeating_spellinnate_CRITICAL_DAMAGE) }}")
+            input(name="attr_damage_critical_roll"  type="hidden" value=" {{criticalroll_name=^{critical_damage}}} {{criticalroll=[[(@{damage_dice} + (@{damage_ability})[ABI] + (@{damage_misc})[MISC] + (@{query_roll_damage_bonus})[@{text_roll_damage_bonus}])*2]]}} {{criticalroll_type=critical-damage}} {{criticalroll_info=@{damage_type}}}")
+            input(name="attr_roll_critical_damage_button" type="hidden" value="{{criticalrollmisc=[^{roll} ^{critical_damage}](~repeating_spellinnate_CRITICAL_DAMAGE) }}")
             case repeating_section_name
                 when "repeating_spellinnate"
                     button(name="roll_CRITICAL_DAMAGE" style="display: none;" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{@{school}} ^{@{magic_tradition}} ^{innate_spell} ^{level} @{current_level}}} @{damage_critical_roll}")

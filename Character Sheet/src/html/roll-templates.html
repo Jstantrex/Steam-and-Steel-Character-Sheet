@@ -25,15 +25,21 @@
                         <span class="template-roll-info {{roll01_type}}">{{roll01_info}}</span>
                     {{/roll01_info}}
                 </div>
-                {{#roll01_critical}}
-                    {{#rollWasCrit() roll01}}
-                        <div class="template-row">
-                            <span class="success">Critical!</span>
-                        </div>
-                    {{/rollWasCrit() roll01}}
-                {{/roll01_critical}}
             {{/roll01}}
             {{#roll01misc}}<div class="template-row">{{roll01misc}}</div>{{/roll01misc}}
+			{{#criticalconfirm}}
+				{{#rollWasCrit() roll01}}
+					<div class="template-row {{criticalconfirm_type}}">
+						{{#criticalconfirm_name}}
+							<span class="template-roll-name {{criticalconfirm_type}}">{{criticalconfirm_name}}</span>
+						{{/criticalconfirm_name}}
+						{{criticalconfirm}}
+						{{#criticalconfirm_info}}
+							<span class="template-roll-info {{criticalconfirm_type}}">{{criticalconfirm_info}}</span>
+						{{/criticalconfirm_info}}
+					</div>
+				{{/rollWasCrit() roll01}}
+			{{/criticalconfirm}}
             {{#roll02}}
                 <div class="template-row {{roll02_type}}">
                     {{#roll02_name}}
@@ -46,16 +52,30 @@
                 </div>
             {{/roll02}}
             {{#roll02misc}}<div class="template-row">{{roll02misc}}</div>{{/roll02misc}}
+			{{#criticalroll}}
+				{{#rollWasCrit() roll01}}
+					<div class="template-row {{criticalroll_type}}">
+						{{#criticalroll_name}}
+							<span class="template-roll-name {{criticalroll_type}}">{{criticalroll_name}}</span>
+						{{/criticalroll_name}}
+						{{criticalroll}}
+						{{#criticalroll_info}}
+							<span class="template-roll-info {{criticalroll_type}}">{{criticalroll_info}}</span>
+						{{/criticalroll_info}}
+					</div>
+				{{/rollWasCrit() roll01}}
+			{{/criticalroll}}
+            {{#criticalrollmisc}}<div class="template-row">{{criticalrollmisc}}</div>{{/criticalrollmisc}}
             {{#roll03}}
-                <div class="template-row {{roll03_type}}">
-                    {{#roll03_name}}
-                        <span class="template-roll-name {{roll03_type}}">{{roll03_name}}</span>
-                    {{/roll03_name}}
-                    {{roll03}}
-                    {{#roll03_info}}
-                        <span class="template-roll-info {{roll03_type}}">{{roll03_info}}</span>
-                    {{/roll03_info}}
-                </div>
+					<div class="template-row {{roll03_type}}">
+						{{#roll03_name}}
+							<span class="template-roll-name {{roll03_type}}">{{roll03_name}}</span>
+						{{/roll03_name}}
+						{{roll03}}
+						{{#roll03_info}}
+							<span class="template-roll-info {{roll03_type}}">{{roll03_info}}</span>
+						{{/roll03_info}}
+					</div>
             {{/roll03}}
             {{#roll03misc}}<div class="template-row">{{roll03misc}}</div>{{/roll03misc}}
             {{#roll04}}
