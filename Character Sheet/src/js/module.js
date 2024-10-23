@@ -803,7 +803,6 @@ var modPf2 = (function () {
         mod = (Math.floor((parseInt(update[`${attr}`], 10) - 10) / 2) || 0) + (parseInt(values[`${attr}_modifier_temporary`]) || 0);
 
 		if (attr === "constitution") {
-			console.log(values[`constitution_tenacity_drain`])
 			update[`${attr}`] -= values[`constitution_tenacity_drain`];
 		}
 
@@ -834,14 +833,14 @@ var modPf2 = (function () {
 		let update = {};
 		if (attr !== "charisma") {
 			var baseMod = ((Math.floor((parseInt(values[`${attr}_score`], 10) - 10) / 2) || 0) || 0);
-			update[`${attr}_max_tenacity`] = baseMod + values[`charisma_modifier`] + parseInt(values[`${attr}_tenacity_mod`]);
+			update[`${attr}_max_tenacity`] = Math.max(baseMod + values[`charisma_modifier`] + parseInt(values[`${attr}_tenacity_mod`]), 0);
 		}
 		else {
 			var abilities = getAttrNames(['abilities']);
 			
 			abilities.forEach(ability => {
 				var baseMod = ((Math.floor((parseInt(values[`${ability}_score`], 10) - 10) / 2) || 0) || 0);
-				update[`${ability}_max_tenacity`] = baseMod + values[`charisma_modifier`] + parseInt(values[`${ability}_tenacity_mod`]);
+				update[`${ability}_max_tenacity`] = Math.max(baseMod + values[`charisma_modifier`] + parseInt(values[`${ability}_tenacity_mod`]), 0);
 			})
 		}
 
