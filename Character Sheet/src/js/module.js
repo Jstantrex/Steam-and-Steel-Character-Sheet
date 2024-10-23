@@ -833,14 +833,14 @@ var modPf2 = (function () {
 		let update = {};
 		if (attr !== "charisma") {
 			var baseMod = ((Math.floor((parseInt(values[`${attr}_score`], 10) - 10) / 2) || 0) || 0);
-			update[`${attr}_max_tenacity`] = Math.max(baseMod + values[`charisma_modifier`] + parseInt(values[`${attr}_tenacity_mod`]), 0);
+			update[`${attr}_max_tenacity`] = Math.max(baseMod + parseInt(values[`charisma_modifier`]) + parseInt(values[`${attr}_tenacity_mod`]), 0);
 		}
 		else {
 			var abilities = getAttrNames(['abilities']);
 			
 			abilities.forEach(ability => {
 				var baseMod = ((Math.floor((parseInt(values[`${ability}_score`], 10) - 10) / 2) || 0) || 0);
-				update[`${ability}_max_tenacity`] = Math.max(baseMod + values[`charisma_modifier`] + parseInt(values[`${ability}_tenacity_mod`]), 0);
+				update[`${ability}_max_tenacity`] = Math.max(baseMod + parseInt(values[`charisma_modifier`]) + parseInt(values[`${ability}_tenacity_mod`]), 0);
 			})
 		}
 
