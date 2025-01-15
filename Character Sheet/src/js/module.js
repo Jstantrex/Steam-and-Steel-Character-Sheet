@@ -17,7 +17,7 @@ var modPf2 = (function () {
         , "saves": ["saving_throws_strengthsave","saving_throws_fortitude","saving_throws_reflex","saving_throws_will"]
         , "saves_fields": ["ability","ability_select","rank","proficiency","item","temporary"]
         , "ac": ["armor_class"]
-        , "ac_fields": ["ability","ability_select","dc_rank","proficiency","item","temporary","dc_base","cap","shield_ac_bonus","shield_temporary"]
+        , "ac_fields": ["ability","ability_select","dc_rank","proficiency","item","temporary","misc","dc_base","cap","shield_ac_bonus","shield_temporary"]
         , "hit_points": ["hit_points_ancestry","hit_points_class","hit_points_other","hit_points_item","constitution"]
         , "repeating_attacks": ["melee-strikes","ranged-strikes"]
         , "attacks_fields": ["weapon","weapon_ability_select","weapon_ability","weapon_proficiency","weapon_rank","weapon_item","weapon_temporary","weapon_traits","damage_dice","damage_dice_size","damage_ability_select","damage_ability","damage_b","damage_p","damage_s","damage_other","damage_effects","damage_additional"]
@@ -974,7 +974,8 @@ var modPf2 = (function () {
             // AC
             update[attr] = (parseInt(values[`${attr}_dc_base`]) || 10)
                 + ability
-                + (parseInt(update[`${attr}_proficiency`]) || 0)
+				+ (parseInt(values[`${attr}_misc`]) || 0)
+                + (parseInt(values[`${attr}_proficiency`]) || 0)
                 + (parseInt(values[`${attr}_item`]) || 0)
                 + (parseInt(values[`${attr}_temporary`]) || 0);
             // Shield

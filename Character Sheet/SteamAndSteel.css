@@ -1137,6 +1137,7 @@ div.sheet-strikes div.sheet-settings span.sheet-sublabel {
 
 div.sheet-strikes div.sheet-settings div.sheet-strikes-grid {
   grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr 1fr; }
+  div.sheet-strikes div.sheet-settings div.sheet-strikes-grid h2,
   div.sheet-strikes div.sheet-settings div.sheet-strikes-grid .sheet-weapon_name,
   div.sheet-strikes div.sheet-settings div.sheet-strikes-grid .sheet-weapon_traits {
     grid-column: 1 / -1;
@@ -1203,6 +1204,20 @@ div.sheet-repeating-weapon-proficiences-grid {
   grid-template-columns: 2.5fr 1fr; }
   div.sheet-repeating-weapon-proficiences-grid input[name="attr_weapon_proficiencies_other"] {
     padding-left: 2%; }
+
+/* RESOURCES */
+div.sheet-resources h2 {
+  line-height: 1.5em;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: serif; }
+
+div.sheet-resources div.sheet-display {
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr;
+  justify-items: left;
+  margin: 2px;
+  padding: 0; }
 
 /* SKILLS */
 div.sheet-skills h2 {

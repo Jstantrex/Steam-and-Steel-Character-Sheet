@@ -1551,6 +1551,21 @@ div.sheet-repeating-weapon-proficiences-grid {
 	}
 }
 
+/* RESOURCES */
+div.sheet-resources {
+	h2 {
+		line-height: 2em;
+	}
+
+	div.sheet-display {
+		align-items			 : center;
+		grid-template-columns: 2fr 1fr 1fr;
+		justify-items        : left;
+		margin				 : 2px;
+		padding              : 0;
+	}
+}
+
 /* SKILLS */
 div.sheet-skills {
 	h2 {
