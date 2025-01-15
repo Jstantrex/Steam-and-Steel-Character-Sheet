@@ -1207,10 +1207,8 @@ div.sheet-repeating-weapon-proficiences-grid {
 
 /* RESOURCES */
 div.sheet-resources h2 {
-  line-height: 1.5em;
-  font-size: 1.5em;
-  text-align: center;
-  font-family: serif; }
+  line-height: 2em;
+  width: 100%; }
 
 div.sheet-resources div.sheet-display {
   align-items: center;
@@ -1218,6 +1216,9 @@ div.sheet-resources div.sheet-display {
   justify-items: left;
   margin: 2px;
   padding: 0; }
+  div.sheet-resources div.sheet-display input {
+    width: 100%;
+    height: 2.5em; }
 
 /* SKILLS */
 div.sheet-skills h2 {

@@ -1,15 +1,19 @@
 <div class="resources background-color">
 	<h1 >resources</h1>
 	<fieldset class="repeating_resources">
+		<input name="attr_resourcename" type='hidden' value='' />
+		<input name="attr_resourcecount" type='hidden' value='' />
+		<input name="attr_resourcemaxcount" type='hidden' value='' />
+		<input class='toggles' name='attr_toggles' type='hidden' value='display,settings,' />
 		<div class="grid display" >
-			<h2 class='sublabel darkred weapon' >resource</h2>
-			<h2 class='sublabel darkred weapon' >count</h2>
-			<h2 class='sublabel darkred weapon' >max count</h2>
-			<input name="attr_resourcename" placeholder="name" title='@{resourcename}' />
+			<h2 class='sublabel darkred' >resource</h2>
+			<h2 class='sublabel darkred' >count</h2>
+			<h2 class='sublabel darkred' >max count</h2>
+			<input name="attr_resourcename" placeholder="name" title='@{resourcename}' type="text" />
 
-			<input name="attr_resourcecount" placeholder="0" title='@{resourcecount}'/>
+			<input name="attr_resourcecount" placeholder="0" title='@{resourcecount}' type="number"/>
 
-			<input name="attr_resourcemaxcount" placeholder="0" title='@{resourcemaxcount}'/>
+			<input name="attr_resourcemaxcount" placeholder="0" title='@{resourcemaxcount}' type="number"/>
 		</div>
 	</fieldset>
 </div>

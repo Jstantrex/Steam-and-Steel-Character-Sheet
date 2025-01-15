@@ -1555,6 +1555,7 @@ div.sheet-repeating-weapon-proficiences-grid {
 div.sheet-resources {
 	h2 {
 		line-height: 2em;
+		width: 100%;
 	}
 
 	div.sheet-display {
@@ -1563,6 +1564,11 @@ div.sheet-resources {
 		justify-items        : left;
 		margin				 : 2px;
 		padding              : 0;
+
+		input {
+			width: 100%;
+			height: 2.5em;
+		}
 	}
 }
 
